@@ -7,11 +7,10 @@ import java.util.Scanner;
 public class Investigacao {
     static Scanner ler = new Scanner(System.in);
     static String CULPADO, CAMINHO, RESUMO1, RESUMO2, DIALOGO01, DIALOGO02, DIALOGO03;
-
-    static boolean SUCESSO;
+    static boolean SUCESSO = true;
 
     public static void main(String[] args) throws FileNotFoundException, InterruptedException {
-        CAMINHO = "src/Who_killed/Crime" + "00" + ".txt";
+        CAMINHO = "C:\\Users\\2022101202010198\\Documents\\GitHub\\whokilled\\Who_killed\\Crime00.txt";
         String espacos = "\n------------------------------------------\n";
         System.out.println(espacos);
         pistasDoCrime(); //Esse e o metodo que vai imprimir as pistas do crime
@@ -46,12 +45,12 @@ public class Investigacao {
 
         while (true) {
             String resposta = ler.nextLine();
-            if (resposta.toLowerCase().equals("sim")) {
+            if (resposta.equalsIgnoreCase("sim")) {
                 System.out.println(" Legista - FALA O DIALOGO 1" +
                         "\n Legista - FALA O DIALOGO 2");
                 Thread.sleep(3000);
                 return;
-            } else if (resposta.toLowerCase().equals("nao")) {
+            } else if (resposta.equalsIgnoreCase("nao")) {
                 System.out.println("Acho melhor nao mecher nas coisas alheias");
                 return;
             } else {
@@ -69,19 +68,19 @@ public class Investigacao {
                 "Eu - Certo conseguir provas o suficente para indentificar o assasino." +
                 "\n O culpado esta entre essas pessoas\n" +
                 " -Suspeito01\n -Suspeito02\n -Suspeito03\n -Suspeito04\n E o culpado so poder ser o ");
-        while (true) {
+        while (SUCESSO) {
             String chute = ler.nextLine();
-            if (chute.toLowerCase().equals("(culpado)")) {
+            if (chute.equalsIgnoreCase("culpado")) {
                 System.out.println("Sim, e ele mesmo");
                 SUCESSO = true;
                 return;
-            } else if (chute.toLowerCase().equals("(Suspeito2)")) {
+            } else if (chute.equalsIgnoreCase("suspeito02")) {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
-            } else if (chute.toLowerCase().equals("(Suspeito3)")) {
+            } else if (chute.equalsIgnoreCase("suspeito03")) {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
-            } else if (chute.toLowerCase().equals("(Suspeito4)")) {
+            } else if (chute.equalsIgnoreCase("suspeito04")) {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
             }else {
