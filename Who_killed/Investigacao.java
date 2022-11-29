@@ -7,24 +7,20 @@ import java.util.Scanner;
 public class Investigacao {
     static Scanner ler = new Scanner(System.in);
     static String CULPADO, CAMINHO, RESUMO1, RESUMO2, DIALOGO01, DIALOGO02, DIALOGO03;
+    static String ESPACO = "\n------------------------------------------\n";
     static boolean SUCESSO = true;
 
     public static void main(String[] args) throws FileNotFoundException, InterruptedException {
-        CAMINHO = "C:\\Users\\2022101202010198\\Documents\\GitHub\\whokilled\\Who_killed\\Crime00.txt";
-        String espacos = "\n------------------------------------------\n";
-        System.out.println(espacos);
+        CAMINHO = "Who_killed/Crime00.txt";
         pistasDoCrime(); //Esse e o metodo que vai imprimir as pistas do crime
-        System.out.println(espacos);
         falaComLegista(); //Esse e o metdo que vai imprimir as gravaçoes do legista
-        System.out.println(espacos);
         vereditoDoCaso(); //Esse e o metodo que vai fazer o chute de quem e o assasino
-        System.out.println(espacos);
         epilogo(); //Esse e o metodo final que vai falar se voce acertou ou nao e imprimir o resumo
-        System.out.println(espacos);
 
     }
 
     public static void pistasDoCrime() throws FileNotFoundException {
+        System.out.println(ESPACO);
         Scanner input = new Scanner(new File(CAMINHO));
         CULPADO = input.nextLine();
         RESUMO1 = input.nextLine();
@@ -38,10 +34,11 @@ public class Investigacao {
     }
 
     public static void falaComLegista() throws InterruptedException {
+        System.out.println(ESPACO);
         Thread.sleep(3000);
-        System.out.println("Depois de ler a ficha do crime, você decide ir ver o legista.\n" +
-                "Mas ao chegar você encontra apenas seu gravador que esta sob a ficha \ndo caso com 2 gravaçoes salvas" +
-                ".Será que devo ouvir as gravações?");
+        System.out.println("-Depois de ler a ficha do crime, você decide ir ver o legista.\n" +
+                "-Mas ao chegar você encontra apenas seu gravador que esta sob a ficha \ndo caso com 2 gravaçoes salvas" +
+                ".\n-Será que devo ouvir as gravações?");
 
         while (true) {
             String resposta = ler.nextLine();
@@ -51,10 +48,10 @@ public class Investigacao {
                 Thread.sleep(3000);
                 return;
             } else if (resposta.equalsIgnoreCase("nao")) {
-                System.out.println("Acho melhor nao mecher nas coisas alheias");
+                System.out.println("-Acho melhor nao mecher nas coisas alheias");
                 return;
             } else {
-                System.out.println("Será que devo verificar as fichas? 'sim' ou 'nao'");
+                System.out.println("-Será que devo verificar as gravacoes? 'sim' ou 'nao'");
             }
 
         }
@@ -62,11 +59,12 @@ public class Investigacao {
     }
 
     public static void vereditoDoCaso() throws InterruptedException {
+        System.out.println(ESPACO);
         System.out.println(RESUMO1);
         Thread.sleep(3000);
-        System.out.println("Ao analizar a ficha por algum tempo você sente que está pronto para identificar o culpado" +
-                "Eu - Certo, consegui provas o suficente para indentificar o assasino." +
-                "\n O culpado esta entre essas pessoas\n" +
+        System.out.println("-Ao analizar a ficha por algum tempo você sente que está pronto para identificar o culpado" +
+                "- Certo, consegui provas o suficente para indentificar o assasino." +
+                "\n -O culpado esta entre essas pessoas\n" +
                 " -Suspeito01\n -Suspeito02\n -Suspeito03\n -Suspeito04\n E o culpado so poder ser o ");
         while (SUCESSO) {
             String chute = ler.nextLine();
@@ -89,11 +87,13 @@ public class Investigacao {
         }
     }
     public static void epilogo(){
+        System.out.println(ESPACO);
         if(SUCESSO){
             System.out.println("Seu papite estava CERTO");
         }else {
             System.out.println("Seu papite estava ERRADO");
         }
         System.out.println(RESUMO2);
+        System.out.println(ESPACO);
     }
 }
