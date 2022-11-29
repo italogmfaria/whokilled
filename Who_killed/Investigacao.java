@@ -40,7 +40,7 @@ public class Investigacao {
     public static void falaComLegista() throws InterruptedException {
         Thread.sleep(3000);
         System.out.println("Depois de ler a ficha do crime, você decide ir ver o legista.\n" +
-                "Mas ao chegar você encontra apenas seu gravador que esta sobe a ficha \ndo caso com 2 gravaçoes salvas" +
+                "Mas ao chegar você encontra apenas seu gravador que esta sob a ficha \ndo caso com 2 gravaçoes salvas" +
                 ".Será que devo ouvir as gravações?");
 
         while (true) {
@@ -54,7 +54,7 @@ public class Investigacao {
                 System.out.println("Acho melhor nao mecher nas coisas alheias");
                 return;
             } else {
-                System.out.println("As vezes preciso confimar comigo mesmo com palavras simples com 'sim' ou 'nao'");
+                System.out.println("Será que devo verificar as fichas? 'sim' ou 'nao'");
             }
 
         }
@@ -64,8 +64,8 @@ public class Investigacao {
     public static void vereditoDoCaso() throws InterruptedException {
         System.out.println(RESUMO1);
         Thread.sleep(3000);
-        System.out.println("Você fica um tempo mais olhado a ficha e então sente que sabe o necessario para mostrar o culpado do crime" +
-                "Eu - Certo conseguir provas o suficente para indentificar o assasino." +
+        System.out.println("Ao analizar a ficha por algum tempo você sente que está pronto para identificar o culpado" +
+                "Eu - Certo, consegui provas o suficente para indentificar o assasino." +
                 "\n O culpado esta entre essas pessoas\n" +
                 " -Suspeito01\n -Suspeito02\n -Suspeito03\n -Suspeito04\n E o culpado so poder ser o ");
         while (SUCESSO) {
@@ -84,7 +84,7 @@ public class Investigacao {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
             }else {
-                System.out.println("Oque esse nome nao esta na lista de suspeitos, nao deve ser um desse");
+                System.out.println("O que? Esse nome nao esta na lista de suspeitos, melhor ler novamente.");
             }
         }
     }
