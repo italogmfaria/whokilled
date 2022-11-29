@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Who_killed.frontend.Lobby">
-  <grid id="27dc6" row-count="1" column-count="1" layout-manager="GridLayoutManager">
-    <margin top="0" left="0" bottom="0" right="0"/>
+  <grid id="27dc6" binding="panel1" custom-create="true" layout-manager="FormLayout">
+    <rowspec value="center:20px:grow(0.1)"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <colspec value="center:p:grow"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
-      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+      <xy x="112" y="140" width="377" height="227"/>
     </constraints>
-    <properties/>
-    <border type="none"/>
-    <children/>
+    <properties>
+      <background color="-3336"/>
+      <enabled value="true"/>
+      <font name="Courier New"/>
+      <foreground color="-3336"/>
+    </properties>
+    <border type="line" title-justification="5" title-position="1">
+      <font/>
+      <color color="-16777216"/>
+    </border>
+    <children>
+      <component id="8fe60" class="javax.swing.JLabel" binding="label1" custom-create="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <icon value="Who_killed/frontend/img/e478e976a23f68b16eb5692dab40bd85.png"/>
+          <text value=""/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="e6eb8" class="javax.swing.JButton" binding="playButton" custom-create="true" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms top="0" left="150" bottom="5" right="150"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <hideActionText value="true"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Play"/>
+        </properties>
+        <clientProperties>
+          <hideActionText class="java.lang.Boolean" value="true"/>
+          <html.disable class="java.lang.Boolean" value="true"/>
+        </clientProperties>
+      </component>
+    </children>
   </grid>
 </form>
