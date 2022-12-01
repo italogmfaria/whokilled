@@ -11,6 +11,8 @@ git push -u origin main
 package Who_killed.frontend;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 
 public class Lobby {
@@ -20,6 +22,12 @@ public class Lobby {
 
     public Lobby() {
         panel1.addComponentListener(new ComponentAdapter() {
+        });
+        playButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
         });
     }
 

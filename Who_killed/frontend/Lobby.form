@@ -1,49 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Who_killed.frontend.Lobby">
-  <grid id="27dc6" binding="panel1" custom-create="true" layout-manager="FormLayout">
-    <rowspec value="center:20px:grow(0.1)"/>
-    <rowspec value="top:4dlu:noGrow"/>
-    <rowspec value="center:max(d;4px):noGrow"/>
-    <colspec value="center:p:grow"/>
+  <grid id="27dc6" binding="panel1" custom-create="true" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="112" y="140" width="377" height="227"/>
+      <xy x="20" y="20" width="758" height="495"/>
     </constraints>
     <properties>
-      <background color="-3336"/>
+      <background color="-16777216"/>
       <enabled value="true"/>
       <font name="Courier New"/>
-      <foreground color="-3336"/>
+      <foreground color="-16777216"/>
     </properties>
     <border type="line" title-justification="5" title-position="1">
       <font/>
+      <title-color color="-2304"/>
       <color color="-16777216"/>
     </border>
     <children>
       <component id="8fe60" class="javax.swing.JLabel" binding="label1" custom-create="true">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties>
-          <icon value="Who_killed/frontend/img/e478e976a23f68b16eb5692dab40bd85.png"/>
+          <background color="-3336"/>
+          <icon value="Who_killed/frontend/img/whokilked.png"/>
           <text value=""/>
           <toolTipText value=""/>
         </properties>
       </component>
-      <component id="e6eb8" class="javax.swing.JButton" binding="playButton" custom-create="true" default-binding="true">
+      <component id="d00f8" class="javax.swing.JButton" binding="playButton" custom-create="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-          <forms top="0" left="150" bottom="5" right="150"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-3336"/>
           <enabled value="true"/>
-          <hideActionText value="true"/>
+          <foreground color="-16777216"/>
           <horizontalTextPosition value="0"/>
-          <text value="Play"/>
+          <text value="PLAY"/>
         </properties>
         <clientProperties>
           <hideActionText class="java.lang.Boolean" value="true"/>
-          <html.disable class="java.lang.Boolean" value="true"/>
         </clientProperties>
       </component>
     </children>
