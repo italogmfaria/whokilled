@@ -33,7 +33,6 @@ public class Investigacao {
         falaComLegista(); //Esse e o metdo que vai imprimir as gravaçoes do legista
         vereditoDoCaso(); //Esse e o metodo que vai fazer o chute de quem e o assasino
         epilogo(); //Esse e o metodo final que vai falar se voce acertou ou nao e imprimir o resumo, E Salvar sua pontuação
-
     }
 
     public static void registraJogador() throws IOException {
