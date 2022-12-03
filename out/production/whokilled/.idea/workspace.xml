@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f82de6b7-d367-4d69-b577-3fa433a21dc1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Who_killed/jogador.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Who_killed/Investigacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/Investigacao.java" afterDir="false" />
+    <list default="true" id="8d149609-8c85-43ee-879e-71489ab4685a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Who_killed/frontend/Lobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/frontend/Lobby.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +12,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2IPTLmwcpN2LTjz8IXRNUnIcZJI" />
+  <component name="ProjectId" id="2IPlF2ZsdcNWWnkuRCfbfS5IUHu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,17 +20,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Developer/Desktop/Ltp II lista 1"
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="teste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Who_killed.teste" />
+    <configuration name="Lobby" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Who_killed.frontend.Lobby" />
       <module name="whokilled" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Who_killed.*" />
+          <option name="PATTERN" value="Who_killed.frontend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -45,18 +39,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.teste" />
+        <item itemvalue="Application.Lobby" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f82de6b7-d367-4d69-b577-3fa433a21dc1" name="Changes" comment="" />
-      <created>1670082174349</created>
+      <changelist id="8d149609-8c85-43ee-879e-71489ab4685a" name="Changes" comment="" />
+      <created>1670090995361</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670082174349</updated>
+      <updated>1670090995361</updated>
     </task>
     <servers />
   </component>

@@ -1,1 +1,0 @@
-nome = Diego : apelido = Cleitin

@@ -18,6 +18,7 @@ import java.awt.event.ActionListener;
 import java.awt.*;
 import java.awt.LayoutManager;
 import java.awt.event.ComponentAdapter;
+import java.io.IOException;
 
 public class Lobby {
     private JPanel panel1;
@@ -27,8 +28,16 @@ public class Lobby {
     public Lobby() {
         start.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                    System.out.println("Button clicked");
+            public void actionPerformed(ActionEvent e){
+                Investigacao investigacao = new Investigacao();
+
+                try {
+                    investigacao.main(new String[]{"a", "b"});
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
         });
     }
