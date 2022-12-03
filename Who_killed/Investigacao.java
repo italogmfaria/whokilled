@@ -29,7 +29,7 @@ public class Investigacao {
     public static Scanner ler = new Scanner(System.in);
 
     public static Random gerador = new Random();
-    private static File arquivo = new File("Who_killed/jogador.txt");
+    public static File arquivo = new File("Who_killed/jogador.txt");
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
@@ -54,7 +54,7 @@ public class Investigacao {
         writeFile(arquivo, nome, apelido);
     }
 
-    private static void writeFile(File arquivo, String nome, String apelido) throws IOException {
+    public static void writeFile(File arquivo, String nome, String apelido) throws IOException {
         FileWriter fw = new FileWriter(arquivo, true);
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write(String.format("nome = %s : apelido = %s", nome, apelido));

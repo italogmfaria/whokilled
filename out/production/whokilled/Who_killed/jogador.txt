@@ -1,0 +1,2 @@
+nome = sadas : apelido = sdas
+nome = dasd : apelido = ad
