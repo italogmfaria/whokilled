@@ -9,8 +9,7 @@ git push -u origin main
  */
 package Who_killed;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Investigacao {
@@ -26,7 +25,8 @@ public class Investigacao {
     static String ESPACO = "\n------------------------------------------\n";
     static boolean SUCESSO = true;
 
-    public static void main(String[] args) throws FileNotFoundException, InterruptedException {
+    private static File arquivo = new File("Who_killed/jogador.txt");
+    public static void main(String[] args) throws IOException, InterruptedException {
         CAMINHO = "Who_killed/Crime00.txt";
         registraJogador(); //Esse e o metodo que vai pegar o nome de o nick do jogador e salvar.
         pistasDoCrime(); //Esse e o metodo que vai imprimir as pistas do crime
@@ -36,7 +36,12 @@ public class Investigacao {
 
     }
 
-    public static void registraJogador() {
+    public static void registraJogador() throws IOException {
+        System.out.print("Nome: ");
+        String nome = ler.nextLine();
+        System.out.print("Apelido: ");
+        String apelido = ler.nextLine();
+        writeFile(arquivo,nome,apelido);
 
     }
 
@@ -115,5 +120,14 @@ public class Investigacao {
         }
         System.out.println(BLUE + RESUMO2 + RESET);
         System.out.println(ESPACO);
+    }
+
+    private static void writeFile(File arquivo,String nome, String apelido) throws IOException {
+        FileWriter fw = new FileWriter(arquivo, true);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(String.format("nome = %s : apelido = %s", nome, apelido));
+        bw.newLine();
+        bw.close();
+        fw.close();
     }
 }
