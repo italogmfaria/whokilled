@@ -38,11 +38,11 @@ public class Investigacao {
     }
 
     public static void jogo() throws IOException, InterruptedException {
-        CAMINHO = "Who_killed/Crime0" + CONTROLADOR + ".txt";
+        CAMINHO = "Who_killed/Crimes/Crime0" + CONTROLADOR + ".txt";
         pistasDoCrime(); //Esse e o metodo que vai imprimir as pistas do crime
         falaComLegista(); //Esse e o metdo que vai imprimir as gravaçoes do legista
         vereditoDoCaso(); //Esse e o metodo que vai fazer o chute de quem e o assasino
-        epilogo(); //Esse e o metodo final que vai falar se voce acertou ou nao e imprimir o resumo, E Salvar sua pontuação
+        epilogo(); //Esse e o metodo final que vai falar se voce acertou ou nao e imprimir o resumo e salva a pontuação
 
     }
 
@@ -64,7 +64,7 @@ public class Investigacao {
     }
 
     public static void pistasDoCrime() throws FileNotFoundException {
-        System.out.println(ESPACO+"                 CASO "+CONTROLADOR+"º"+ESPACO);
+        System.out.println(ESPACO + "                 CASO " + CONTROLADOR + "º" + ESPACO);
         Scanner input = new Scanner(new File(CAMINHO));
         CULPADO = input.nextLine();
         INOCENTES[0] = input.nextLine();
@@ -153,13 +153,14 @@ public class Investigacao {
             System.out.println("Pontuação" + PONTOS);
             CONTROLADOR++;
             System.out.println(BLUE + RESUMO2 + RESET);
-            jogo();
-
+            if (CONTROLADOR < 7) {
+                jogo();
+            }
         } else {
             System.out.println("Seu papite estava " + RED + "ERRADO" + RESET);
-            System.out.println("Sua pontuação final é " + PONTOS);
             System.out.println(BLUE + RESUMO2 + RESET);
         }
+        System.out.println("Sua pontuação final é " + PONTOS);
         System.out.println(ESPACO);
     }
 
