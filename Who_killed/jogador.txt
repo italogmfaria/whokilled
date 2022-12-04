@@ -1,2 +1,0 @@
-nome = ads : apelido = das
-nome = ff : apelido = f

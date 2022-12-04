@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79cf7986-38bf-4b92-a43a-d936bf22b030" name="Changes" comment="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.2 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
+      <change beforePath="$PROJECT_DIR$/Who_killed/Crimes/Crime02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/Crimes/Crime02.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Who_killed/Crimes/Crime03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/Crimes/Crime03.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Who_killed/Crimes/Crime04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/Crimes/Crime04.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Who_killed/Crimes/Crime05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/Crimes/Crime05.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Who_killed/Investigacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/Investigacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Who_killed/jogador.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/jogador.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
