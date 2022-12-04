@@ -41,14 +41,15 @@ public class Investigacao {
     public static void regras() {
         System.out.println(ESPACO);
         System.out.print("""
-                Bem Vindo ao Who Killed, uma simulação de investigação
-                As regras são simples
-                ACERTO O QUEM E O ASSASINO
-                BLABLALBALBABALB
-                BLABLBABLABBALB
-                BLABABALB
-                                
-                Boa Sorte!!!
+                Bem Vindo ao Who Killed, o melhor e mais bem feito jogo de investigação
+                O jogo funciona em 4 fase
+                
+                1ºFase - Você receber uma ficha com informações sobre a vitima do crime, Você deve ler e analisar estas pistas.
+                2ºFase - Você agora pode escolher entre ouvir as gravaçoes do lesgita ou não.Aceitando você recebera mais dicas mas pedera pontos.
+                3ºFase - Agora e hora da verdade, Você deve escolhhar quem e o culpado entre uma lista de suspeito, Você tera apenas uma chance.
+                4ºFase - Caso você acerte o culpado você vai ganha ponto é ir para outro caso se não fim de jogo.
+                
+                                                               Boa Sorte!!!
                 """);
         System.out.print(ESPACO);
     }
