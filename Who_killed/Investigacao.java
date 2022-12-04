@@ -150,7 +150,7 @@ public class Investigacao {
         if (SUCESSO) {
             System.out.println("Seu papite estava " + GREEN + "CERTO" + RESET);
             PONTOS++;
-            System.out.println("Pontuação" + PONTOS);
+            System.out.println("Pontuação --- " + PONTOS);
             CONTROLADOR++;
             System.out.println(BLUE + RESUMO2 + RESET);
             if (CONTROLADOR < 7) {
