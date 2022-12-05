@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79cf7986-38bf-4b92-a43a-d936bf22b030" name="Changes" comment="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.2 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <change beforePath="$PROJECT_DIR$/Who_killed/Investigacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Who_killed/Investigacao.java" afterDir="false" />
-    </list>
+    <list default="true" id="79cf7986-38bf-4b92-a43a-d936bf22b030" name="Changes" comment="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.2 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,13 +18,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/josej/IdeaProjects/Projeto Who Kileed JopPane",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\josej\IdeaProjects\Projetos01\src\whokilled\Who_killed\Crimes" />

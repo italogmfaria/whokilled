@@ -9,6 +9,7 @@ git push -u origin main
  */
 package Who_killed;
 
+import javax.swing.*;
 import java.io.*;
 import java.util.Random;
 import java.util.Scanner;
@@ -20,7 +21,7 @@ public class Investigacao {
     public static final String PURPLE = "\u001B[35m";
     public static final String GREEN = "\u001B[32m";
     public static final String RED = "\u001B[31m";
-    public static String CULPADO, CAMINHO, RESUMO1, RESUMO2, DIALOGO01, DIALOGO02, DIALOGO03, NOME, NICK;
+    public static String CULPADO, CAMINHO, RESUMO1, RESUMO2, DIALOGO01, DIALOGO02, DIALOGO03, NOME, NICK,DIALOGO04,DIALOGO05,DIALOGO06,DIALOGO07 ;
     public static String[] INOCENTES = new String[3];
     public static String ESPACO = "\n-------------------------------------------\n";
     public static boolean SUCESSO = true;
@@ -39,26 +40,26 @@ public class Investigacao {
     }
 
     public static void regras() {
-        System.out.println(ESPACO);
-        System.out.print("""
+        JOptionPane.showMessageDialog(
+                null,
+                """
                 Bem Vindo ao Who Killed, o melhor e mais bem feito jogo de investigação
-                O jogo funciona em 4 fase
+                O jogo funciona da seguinte maneira:
+                   -Dados e informações importantes serão impresos no console para facilitar a consulta.
+                   -Você deve interagir com as caixa de dialogos ou de opçoes para avançar no jogo.
+                   -Cada escolha sua tem consequecias escolha com cuidado.
+                   -Acerte o culpado para continuar para outro caso.
                 
-                1ºFase - Você receber uma ficha com informações sobre a vitima do crime, Você deve ler e analisar estas pistas.
-                2ºFase - Você agora pode escolher entre ouvir as gravaçoes do lesgita ou não.Aceitando você recebera mais dicas mas pedera pontos.
-                3ºFase - Agora e hora da verdade, Você deve escolhhar quem e o culpado entre uma lista de suspeito, Você tera apenas uma chance.
-                4ºFase - Caso você acerte o culpado você vai ganha ponto é ir para outro caso se não fim de jogo.
-                
-                                                               Boa Sorte!!!
-                """);
-        System.out.print(ESPACO);
+                                                                            Boa Sorte!!!
+                """,
+                "Boas Vindas!",
+                JOptionPane.INFORMATION_MESSAGE
+        );
     }
 
     public static void registraJogador() throws IOException {
-        System.out.print("Insira o seu nome: ");
-        NOME = ler.nextLine();
-        System.out.print("Insira um nickname: ");
-        NICK = ler.nextLine();
+        NOME = JOptionPane.showInputDialog("Digite Seu Nome");
+        NICK = JOptionPane.showInputDialog("Digite Seu Nick");
     }
 
 
@@ -72,55 +73,107 @@ public class Investigacao {
     }
 
     public static void pistasDoCrime() throws FileNotFoundException {
-        System.out.println(ESPACO + "                 CASO " + CONTROLADOR + "º" + ESPACO);
+        if(CONTROLADOR==1){
+        JOptionPane.showMessageDialog(
+                null,
+                """
+                 Você e um jovem investigador que acabou de ser tranferindo de sua cidade para trabalha em caso mais
+                importante e relevante. Longo em seu primeiro dia você indo para o seu trabalho recebe uma messagem:
+                     Capitão Novo
+                   Bom dia novato, deixei varios casos em sua mesa de uma olhada neles e para mais informações
+                   vai la no legista. Conside esse seu presente de boas vindas                             
+                """,
+                "1º Dia",
+                JOptionPane.INFORMATION_MESSAGE
+        );}else{
+            JOptionPane.showMessageDialog(
+                    null,
+                    """
+                     Você acaba de conseguir passa de frase
+                     A cada frase o jogo vai ficando mais dificil e desafiador                           
+                    """,
+                    "Proxima Frase",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        System.out.print(ESPACO+"                 CASO " + CONTROLADOR + "º" + ESPACO);
         Scanner input = new Scanner(new File(CAMINHO));
         CULPADO = input.nextLine();
         INOCENTES[0] = input.nextLine();
         INOCENTES[1] = input.nextLine();
         INOCENTES[2] = input.nextLine();
         RESUMO1 = input.nextLine();
-        RESUMO2 = input.nextLine();
         DIALOGO01 = input.nextLine();
         DIALOGO02 = input.nextLine();
         DIALOGO03 = input.nextLine();
+        DIALOGO04 = input.nextLine();
+        DIALOGO05 = input.nextLine();
+        DIALOGO06 = input.nextLine();
+        DIALOGO07 = input.nextLine();
         while (input.hasNext()) {
             System.out.println(input.nextLine());
         }
+        if(CONTROLADOR ==1) {
+            System.out.println(GREEN + "\nO capitão deixou esses casos para me testar?" +
+                    "\nAhh, ele só deve precisar de uma opiniao diferente. Né?" + RESET);
+        }else{
+            System.out.println(GREEN + "\nHum esse caso parece " +
+                    "\n\tser mais desafiador" + RESET);
+        }
+        System.out.println(ESPACO);
+        if(CONTROLADOR==1){
+        JOptionPane.showMessageDialog(
+                null,
+                """
+                Assim que você vai avançado no caso, terão algumas anotações, dicas e informações importantes no console.
+                As informações são separadas em cores:
+                    Azul - São informações que te forneceram sobre o caso
+                    Verde - São obesevações que 'você' fez.
+                    Roxo - São possiveis suspeitos
+                """,
+                "Dica - Anotações",
+                JOptionPane.INFORMATION_MESSAGE
+        );}
+
     }
 
     public static void falaComLegista() throws InterruptedException {
-        System.out.println(ESPACO);
-        //Thread.sleep(2000);
-        System.out.println("-Depois de ler a ficha do crime, você decide ir ver o legista.\n" +
-                "-Mas ao chegar você encontra apenas seu gravador que esta sob a ficha \ndo caso com 2 gravaçoes salvas." +
-                YELLOW + "\n-Será que devo ouvir as gravações?" + RESET);
-
-        while (true) {
-            String resposta = ler.nextLine();
-            if (resposta.equalsIgnoreCase("sim")) {
-                System.out.println(BLUE + DIALOGO01 +
-                        "\n" + DIALOGO02 + RESET);
-                PONTOCADACASO[CONTROLADOR] = 0;
-                return;
-            } else if (resposta.equalsIgnoreCase("nao") || resposta.equalsIgnoreCase("não")) {
-                System.out.println("-Acho melhor nao mecher nas coisas alheias");
-                PONTOCADACASO[CONTROLADOR] = 2;
-                return;
-            } else {
-                System.out.println("-Será que devo verificar as gravacoes? 'sim' ou 'nao'");
-            }
-        }
+        JOptionPane.showMessageDialog(
+                null,
+                """
+                Após ler um pouco das informações sobre o caso você decide
+                levantar e ir atrás do legista para saber um pouco mais.
+                """,
+                "Consequencia",
+                JOptionPane.INFORMATION_MESSAGE
+        );
+        System.out.println(GREEN+"Necrotério fica a esquerda da sala\n do capitão no final do corredor."+RESET);
+        JOptionPane.showMessageDialog(
+                null,
+                """
+                Depois de andar um pouco você achar o necrotério e uma placa:
+                   !FAÇA SILENCIO!
+                Então você abre a porta cuidadosamente é entra.
+                """,
+                "necrotério Silecioso",
+                JOptionPane.INFORMATION_MESSAGE
+        );
+        String[] stg = new String[0];
+        Who_killed.Legista.main(stg);
     }
 
     public static void vereditoDoCaso() throws InterruptedException {
         System.out.println(ESPACO);
-        //System.out.println(RESUMO1); RESUMO DENCESSASARIO
-        //Thread.sleep(2000);
-        System.out.println("""
-                -Ao analizar a ficha por algum tempo você sente que está pronto para identificar o culpado,certo, consegui provas o suficente para indentificar o assasino.
-                O culpado esta entre essas pessoas
-                """);
-
+        JOptionPane.showMessageDialog(
+                null,
+                """
+                Você volta para sua mesa e da uma olhada final nas informações é em suas anotações.
+                Mas mesmo tendo alguma ideia do que pode ter acotecido você não tem nenhum nome
+                de suspeito.
+                Mas ao examinar melhor sua mesa você encontra dentro da graveta varias ficha de suspeitos.
+                """,
+                "Consequencia",
+                JOptionPane.INFORMATION_MESSAGE
+        );
         System.out.println("=================");
         int random = gerador.nextInt(3) + 1;
         int cont = 0;
@@ -133,9 +186,19 @@ public class Investigacao {
             }
         }
         System.out.println("=================");
-        System.out.println("Está na hora da decisão");
+        if(CONTROLADOR==1){
+            JOptionPane.showMessageDialog(
+                    null,
+                    """
+                    Esse nomes em roxos no console são os pricipais suspeito de uma olha nas ficha dele
+                    para ter uma ideia de quem e o culpado.
+                    Caso queria ver alguma informação novamente basta olha no console.
+                    """,
+                    "Dica - Suspeitos",
+                    JOptionPane.INFORMATION_MESSAGE
+            );}
         while (SUCESSO) {
-            String chute = ler.nextLine();
+            String chute = JOptionPane.showInputDialog("Quem é o culpado?");
             if (chute.equalsIgnoreCase(CULPADO)) {
                 System.out.println("Sim, e ele mesmo");
                 SUCESSO = true;
@@ -150,7 +213,9 @@ public class Investigacao {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
             } else {
-                System.out.println("O que? Esse nome nao esta na lista de suspeitos, melhor ler novamente.");
+                JOptionPane.showMessageDialog(null,"O que? Esse nome nao esta na lista de suspeitos, melhor ler novamente.",
+                        "Que?",JOptionPane.INFORMATION_MESSAGE,null);
+
             }
         }
     }
@@ -158,20 +223,25 @@ public class Investigacao {
     public static void epilogo() throws IOException, InterruptedException {
         System.out.println(ESPACO);
         if (SUCESSO) {
-            System.out.println("Seu papite estava " + GREEN + "CERTO" + RESET);
+            JOptionPane.showMessageDialog(null,"Seu papite estava CERTO" ,
+                    "Resultado",JOptionPane.INFORMATION_MESSAGE,null);
+            System.out.println(GREEN + "Consegui ACERTAR o meu "+ CONTROLADOR +"º caso" + RESET);
             System.out.println(BLUE + RESUMO2 + RESET);
             System.out.println("Pontuação --- " + PONTOS);
-            PONTOCADACASO[CONTROLADOR] += 3;
+            PONTOCADACASO[CONTROLADOR] = 1;
             CONTROLADOR++;
-            if (CONTROLADOR < 7) {
+            if (CONTROLADOR < 4) {
                 jogo();
             } else {
                 CONTROLADOR--;
-                System.out.println("--> Parabens Você Acertou Todos os Casos <--");
+                JOptionPane.showMessageDialog(null,"Parabens Você Acertou Todos os Casos",
+                        "Epilogo",JOptionPane.INFORMATION_MESSAGE,null);
                 imprimirResumoFinal();
             }
         } else {
-            System.out.println("Seu papite estava " + RED + "ERRADO" + RESET);
+            JOptionPane.showMessageDialog(null,"Seu papite estava ERRADO" ,
+                    "Fim de Jogo",JOptionPane.INFORMATION_MESSAGE,null);
+            System.out.println(GREEN + "Eu ERREI o meu "+ CONTROLADOR +"º caso" + RESET);
             System.out.println(BLUE + RESUMO2 + RESET);
             PONTOCADACASO[CONTROLADOR] = 0;
             imprimirResumoFinal();
@@ -185,7 +255,6 @@ public class Investigacao {
         System.out.println("\t Nick  --->  " + NICK);
         System.out.println("\t Pontuação:");
         for (int i = 1; i <= CONTROLADOR; i++) {
-
             System.out.println("\t\t Caso " + i + "º ---> " + PONTOCADACASO[i] + " Pontos");
             PONTOS += PONTOCADACASO[i];
         }
