@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79cf7986-38bf-4b92-a43a-d936bf22b030" name="Changes" comment="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.2 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
+    <list default="true" id="6581fa89-2fad-43a2-8249-6bac0887ebdd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2IPCawU1ULyOp4FPfBSJzMDUcV4" />
+  <component name="ProjectId" id="2IUVDmZZHZVXXLEGvKmoTtTWnq9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -21,43 +18,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/josej/IdeaProjects/Projeto Who Kileed JopPane",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\josej\IdeaProjects\Projetos01\src\whokilled\Who_killed\Crimes" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Application.Investigacao">
-    <configuration name="Investigacao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Who_killed.Investigacao" />
-      <module name="whokilled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Who_killed.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Lobby (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Who_killed.frontend.Lobby" />
-      <module name="whokilled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Who_killed.frontend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Lobby" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Who_killed.frontend.Lobby" />
       <module name="whokilled" />
@@ -73,71 +37,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Investigacao" />
         <item itemvalue="Application.Lobby" />
-        <item itemvalue="Application.Lobby (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="79cf7986-38bf-4b92-a43a-d936bf22b030" name="Changes" comment="" />
-      <created>1670073901299</created>
+      <changelist id="6581fa89-2fad-43a2-8249-6bac0887ebdd" name="Changes" comment="" />
+      <created>1670236035646</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670073901299</updated>
+      <updated>1670236035646</updated>
     </task>
-    <task id="LOCAL-00001" summary="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.3 Organização e cores nos prints&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <created>1670077312429</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1670077312429</updated>
-    </task>
-    <task id="LOCAL-00002" summary="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.5 Main e novo metodo&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <created>1670091391508</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1670091391508</updated>
-    </task>
-    <task id="LOCAL-00003" summary="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.5 Main e novo metodo&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <created>1670091702957</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1670091702957</updated>
-    </task>
-    <task id="LOCAL-00004" summary="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.5 Main e novo metodo&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <created>1670091925818</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1670091925818</updated>
-    </task>
-    <task id="LOCAL-00005" summary="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <created>1670093272423</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1670093272423</updated>
-    </task>
-    <task id="LOCAL-00006" summary="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.1 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <created>1670093428752</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1670093428753</updated>
-    </task>
-    <task id="LOCAL-00007" summary="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.2 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main">
-      <created>1670094696591</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1670094696591</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,13 +62,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.3 Organização e cores nos prints&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
-    <MESSAGE value="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.5 Main e novo metodo&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
-    <MESSAGE value="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
-    <MESSAGE value="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.1 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
-    <MESSAGE value="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.2 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
-    <option name="LAST_COMMIT_MESSAGE" value="echo &quot;# whokilled&quot; &gt;&gt; README.md&#10;git init&#10;git add README.md&#10;git commit -m &quot;VERSAO 1.6.2 Add dos crimes&quot;&#10;git branch -M main&#10;git remote add origin https://github.com/italogmfaria/whokilled.git&#10;git push -u origin main" />
   </component>
 </project>

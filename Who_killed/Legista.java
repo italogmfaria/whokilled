@@ -15,7 +15,7 @@ public class Legista {
         };
         final int n = JOptionPane.showOptionDialog(
                 null,
-                "Você entra na sala do legista e ver o legista distraido em uma canto. Oque você faz?",
+                "Você entra na sala do legista e ver o legista distraido em uma canto. O que você faz?",
                 "Necrotério",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
@@ -26,7 +26,7 @@ public class Legista {
         String consequenciaA = "";
         switch (n) {
             case 0:
-                consequenciaA = "Então você camaninha até ele, chegando perto você fala\n" +
+                consequenciaA = "Então você anda até ele, chegando perto você fala\n" +
                         " - Oi sou o novo investigador tem um minuto?";
                 dialogoB(consequenciaA);
                 break;
@@ -59,7 +59,7 @@ public class Legista {
         final int n = JOptionPane.showOptionDialog(
                 null,
                 "O legista com uma voz ironia e um pouco debochada fala:\n" +
-                        " - Ah o novato, e ai oque quer?",
+                        " - Ah o novato, e ai o que quer?",
                 "Necrotério",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
@@ -70,7 +70,7 @@ public class Legista {
         String consequenciaB = "";
         switch (n) {
             case 0:
-                consequenciaB = "O legista abre uma graveta de uma mesa e pega uma ficha do caso." +
+                consequenciaB = "O legista abre uma gaveta de uma mesa e pega uma ficha do caso." +
                         "\nOlha para você e começa a fala:";
                 dialogoB1(consequenciaB);
                 break;

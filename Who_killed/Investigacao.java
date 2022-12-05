@@ -45,9 +45,9 @@ public class Investigacao {
                 """
                 Bem Vindo ao Who Killed, o melhor e mais bem feito jogo de investigação
                 O jogo funciona da seguinte maneira:
-                   -Dados e informações importantes serão impresos no console para facilitar a consulta.
-                   -Você deve interagir com as caixa de dialogos ou de opçoes para avançar no jogo.
-                   -Cada escolha sua tem consequecias escolha com cuidado.
+                   -Dados e informações importantes serão impressos no console para facilitar a consulta.
+                   -Você deve interagir com as caixa de diálogos ou de opções para avançar no jogo.
+                   -Cada escolha sua tem consequências escolha com cuidado.
                    -Acerte o culpado para continuar para outro caso.
                 
                                                                             Boa Sorte!!!
@@ -77,11 +77,11 @@ public class Investigacao {
         JOptionPane.showMessageDialog(
                 null,
                 """
-                 Você e um jovem investigador que acabou de ser tranferindo de sua cidade para trabalha em caso mais
-                importante e relevante. Longo em seu primeiro dia você indo para o seu trabalho recebe uma messagem:
+                 Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalha em caso mais
+                importante e relevante. Logo em seu primeiro dia você está indo para o seu trabalho e recebe uma messagem:
                      Capitão Novo
-                   Bom dia novato, deixei varios casos em sua mesa de uma olhada neles e para mais informações
-                   vai la no legista. Conside esse seu presente de boas vindas                             
+                   Bom dia novato, deixei vários casos em sua mesa dê uma olhada neles e para mais informações
+                   vá até o legista. Considere esse seu presente de boas vindas                             
                 """,
                 "1º Dia",
                 JOptionPane.INFORMATION_MESSAGE
@@ -89,7 +89,7 @@ public class Investigacao {
             JOptionPane.showMessageDialog(
                     null,
                     """
-                     Você acaba de conseguir passa de frase
+                     Você acaba de conseguir passar de frase
                      A cada frase o jogo vai ficando mais dificil e desafiador                           
                     """,
                     "Proxima Frase",
@@ -114,7 +114,7 @@ public class Investigacao {
         }
         if(CONTROLADOR ==1) {
             System.out.println(GREEN + "\nO capitão deixou esses casos para me testar?" +
-                    "\nAhh, ele só deve precisar de uma opiniao diferente. Né?" + RESET);
+                    "\nAhh, ele só deve precisar de uma opinião diferente. Né?" + RESET);
         }else{
             System.out.println(GREEN + "\nHum esse caso parece " +
                     "\n\tser mais desafiador" + RESET);
@@ -152,7 +152,7 @@ public class Investigacao {
                 """
                 Depois de andar um pouco você achar o necrotério e uma placa:
                    !FAÇA SILENCIO!
-                Então você abre a porta cuidadosamente é entra.
+                Então você abre a porta cuidadosamente e entra.
                 """,
                 "necrotério Silecioso",
                 JOptionPane.INFORMATION_MESSAGE
@@ -166,10 +166,10 @@ public class Investigacao {
         JOptionPane.showMessageDialog(
                 null,
                 """
-                Você volta para sua mesa e da uma olhada final nas informações é em suas anotações.
-                Mas mesmo tendo alguma ideia do que pode ter acotecido você não tem nenhum nome
+                Você volta para sua mesa e da uma olhada final nas informações e em suas anotações.
+                Mas mesmo tendo alguma ideia do que pode ter acontecido, você não tem nenhum nome
                 de suspeito.
-                Mas ao examinar melhor sua mesa você encontra dentro da graveta varias ficha de suspeitos.
+                Mas ao examinar melhor sua mesa você encontra dentro da graveta várias ficha de suspeitos.
                 """,
                 "Consequencia",
                 JOptionPane.INFORMATION_MESSAGE
@@ -213,7 +213,7 @@ public class Investigacao {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
             } else {
-                JOptionPane.showMessageDialog(null,"O que? Esse nome nao esta na lista de suspeitos, melhor ler novamente.",
+                JOptionPane.showMessageDialog(null,"O que? Esse nome não está na lista de suspeitos, melhor ler novamente.",
                         "Que?",JOptionPane.INFORMATION_MESSAGE,null);
 
             }
@@ -234,7 +234,7 @@ public class Investigacao {
                 jogo();
             } else {
                 CONTROLADOR--;
-                JOptionPane.showMessageDialog(null,"Parabens Você Acertou Todos os Casos",
+                JOptionPane.showMessageDialog(null,"Parabéns Você Acertou Todos os Casos",
                         "Epilogo",JOptionPane.INFORMATION_MESSAGE,null);
                 imprimirResumoFinal();
             }
