@@ -62,7 +62,7 @@ public class Investigacao {
     }
 
 
-    public static void jogo() throws IOException, InterruptedException {
+    public static void jogo() throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         CAMINHO = "Who_killed/Crimes/Crime0" + CONTROLADOR + ".txt";
         pistasDoCrime(); //Esse e o metodo que vai imprimir as pistas do crime
         falaComLegista(); //Esse e o metdo que vai imprimir as gravaçoes do legista
@@ -71,20 +71,18 @@ public class Investigacao {
 
     }
 
-    public static void pistasDoCrime() throws FileNotFoundException {
+    public static void pistasDoCrime() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
         if(CONTROLADOR==1){
-        JOptionPane.showMessageDialog(
-                null,
-                """
-                 Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalha em caso mais
+            String titulo1Dia = "1º Dia";
+            String texto1Dia = """
+                Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalha em caso mais
                 importante e relevante. Logo em seu primeiro dia você está indo para o seu trabalho e recebe uma messagem:
                      Capitão Novo
                    Bom dia novato, deixei vários casos em sua mesa dê uma olhada neles e para mais informações
-                   vá até o legista. Considere esse seu presente de boas vindas                             
-                """,
-                "1º Dia",
-                JOptionPane.INFORMATION_MESSAGE
-        );}else{
+                   vá até o legista. Considere esse seu presente de boas vindas                                                                                               
+                """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura02.wav", texto1Dia, titulo1Dia);
+        }else{
             JOptionPane.showMessageDialog(
                     null,
                     """
@@ -120,18 +118,16 @@ public class Investigacao {
         }
         System.out.println(ESPACO);
         if(CONTROLADOR==1){
-        JOptionPane.showMessageDialog(
-                null,
-                """
+            String titulo1Dica = "Dica - Anotações";
+            String texto1Dica = """
                 Assim que você vai avançado no caso, terão algumas anotações, dicas e informações importantes no console.
                 As informações são separadas em cores:
                     Azul - São informações que te forneceram sobre o caso
                     Verde - São obesevações que 'você' fez.
-                    Roxo - São possiveis suspeitos
-                """,
-                "Dica - Anotações",
-                JOptionPane.INFORMATION_MESSAGE
-        );}
+                    Roxo - São possiveis suspeitos                                                                                              
+                """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura03.wav", texto1Dica, titulo1Dica);
+        }
 
     }
 
@@ -219,7 +215,7 @@ public class Investigacao {
         }
     }
 
-    public static void epilogo() throws IOException, InterruptedException {
+    public static void epilogo() throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         System.out.println(ESPACO);
         if (SUCESSO) {
             JOptionPane.showMessageDialog(null,"Seu papite estava CERTO" ,
