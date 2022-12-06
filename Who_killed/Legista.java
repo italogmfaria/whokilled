@@ -15,7 +15,7 @@ public class Legista {
         };
         final int n = JOptionPane.showOptionDialog(
                 null,
-                "Você entra na sala do legista e ver o legista distraido em uma canto. O que você faz?",
+                "Ao entrar na sala você tem que tomar um decisão: ",
                 "Necrotério",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
@@ -26,12 +26,12 @@ public class Legista {
         String consequenciaA = "";
         switch (n) {
             case 0:
-                consequenciaA = "Então você anda até ele, chegando perto você fala\n" +
-                        " - Oi sou o novo investigador tem um minuto?";
+                consequenciaA = "Chegando até ele, você diz: \n" +
+                        " - Posso tomar um minuto do seu tempo? Acabei de ser transferido para esse caso.";
                 dialogoB(consequenciaA);
                 break;
             case 1:
-                consequenciaA = "Você entra devagar e sé ve perto de algumas ficha e perto de um corpo";
+                consequenciaA = "Analisando tudo, você encontra uma ficha que está do lado de um corpo. Dentro dela tem uma ficha.";
                 dialogoC(consequenciaA);
                 break;
             case 2:
@@ -58,8 +58,8 @@ public class Legista {
         };
         final int n = JOptionPane.showOptionDialog(
                 null,
-                "O legista com uma voz ironia e um pouco debochada fala:\n" +
-                        " - Ah o novato, e ai o que quer?",
+                "Com tom irônico o legista diz: \n" +
+                        " - Ah o novato, o que quer aqui?",
                 "Necrotério",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
@@ -70,8 +70,8 @@ public class Legista {
         String consequenciaB = "";
         switch (n) {
             case 0:
-                consequenciaB = "O legista abre uma gaveta de uma mesa e pega uma ficha do caso." +
-                        "\nOlha para você e começa a fala:";
+                consequenciaB = "O legista abre e pega de dentro de uma gaveta uma ficha sobre o caso." +
+                        "\nE começa a falar com você: ";
                 dialogoB1(consequenciaB);
                 break;
             case 1:
@@ -80,7 +80,7 @@ public class Legista {
                 dialogoB2(consequenciaB);
                 break;
             case 2:
-                consequenciaB = "O legista te olha estranho e fala:\n - Oi. Ta você sabe onde e a porta, to ocupado." +
+                consequenciaB = "O legista te olha estranho e fala:\n - Oi. Tá você sabe onde e a porta, to ocupado." +
                         "\nEntão ele vira e volta a fazer oque estava fazendo e você sai da sala.";
                 dialogoB3(consequenciaB);
                 break;
@@ -96,7 +96,7 @@ public class Legista {
                 JOptionPane.INFORMATION_MESSAGE
         );
         final Object[] optionsB1 = {
-                "Tem alguma dica de como seria a assasino?",
+                "Tem alguma dica de como seria o assasino?",
                 "Algum detalhe te chama a ateção nesse caso?"
         };
         final int n = JOptionPane.showOptionDialog(
@@ -160,7 +160,7 @@ public class Legista {
         switch (n) {
             case 0:
                 consequenciaB2 = Investigacao.DIALOGO02;
-                dialogoB2A(consequenciaB2,"Fala mais sobre a vítima em sí");
+                dialogoB2A(consequenciaB2,"Fale mais sobre a vítima em sí");
                 break;
             case 1:
                 consequenciaB2 = Investigacao.DIALOGO03;
@@ -199,13 +199,13 @@ public class Legista {
                 JOptionPane.INFORMATION_MESSAGE
         );
         final Object[] optionsC = {
-                "Olha o corpo",
+                "Olhar o corpo",
                 "Ver as fichas"
         };
         final int n = JOptionPane.showOptionDialog(
                 null,
-                "Você ve que o corpo parece com as decriçoes da vítima da investigação. " +
-                        "\nÉ tem uma ficha que bate com nome da vítima.",
+                "O corpo e a ficha batem com as informações recebidas anteriormente sobre a vítima do caso. " +
+                        "\n",
                 "Necrotério",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.QUESTION_MESSAGE,
@@ -231,7 +231,7 @@ public class Legista {
     public static void dialogoC1() {
         JOptionPane.showMessageDialog(
                 null,
-                "Você chegar perto do corpo e começa a olha mais perto, mas antes de ver algo você escuta:",
+                "Quando você começa a olhar o corpo mais de perto, escuta uma voz dizendo: ",
                 "Necrotério",
                 JOptionPane.INFORMATION_MESSAGE
         );
@@ -256,10 +256,10 @@ public class Legista {
     public static void dialogoC3() {
         JOptionPane.showMessageDialog(
                 null,
-                "\n - Ei ta fazendo oque ai!? O legista aqui sou eu sai dai de perto!" +
-                        "\nO legista levanta de onde estava e vem em sua direção e começa a falar agrevivamente:" +
-                        "\n - Cara tu so pode ser o novato, ta querendo informações do seu caso?. Mas você nao pode so chegar" +
-                        "\n mecher nas coisas assim!",
+                "\n - Tá fazendo o que aqui? Pode ir saindo de perto." +
+                        "\nO legista vem em sua direção e começa a falar agressivamente: " +
+                        "\n - Você só pode ser o novato, ta querendo informações do seu caso?. Você não pode só chegar" +
+                        "\n e ir mexendo nas coisas assim!",
                 "Necrotério",
                 JOptionPane.INFORMATION_MESSAGE
         );
@@ -277,10 +277,10 @@ public class Legista {
     }
 
     public static void dialogoE() {
-        String dialogofinal = "Toc Toc! Você escuta alguem batendo na porta, é um homem jovem abre e fala" +
-                "\n - Legista, o capitão ta te chamando lá na sala dele, parece que e urgente" +
-                "\nO legista sai com você para fora da sala, e olha pra você e fala:" +
-                "\n - Tenho que ir ver oque ele quer, dé uma olhado melhor na sua mesa tem tudo lá";
+        String dialogofinal = "Toc Toc! Você escuta alguem batendo na porta, um jovem abre e fala: " +
+                "\n - Legista, o capitão esta te chamando na sala dele, parece ser urgente!" +
+                "\nVocê acompanha o legista até a parte de fora da sala, ele olha para você e diz: " +
+                "\n - Tenho que ir ver oque ele quer, tudo que precisa está na sua mesa.";
         JOptionPane.showMessageDialog(
                 null,
                 dialogofinal,

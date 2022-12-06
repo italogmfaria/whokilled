@@ -43,11 +43,11 @@ public class Investigacao {
     public static void regras() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         String tituloRegra = "Boas Vindas";
         String textoRegra = """
-                Bem Vindo ao Who Killed, o melhor e mais bem feito jogo de investigação
+                Bem Vindo ao Who Killed, o melhor e mais bem feito jogo de investigação.
                 O jogo funciona da seguinte maneira:
-                   -Dados e informações importantes serão impressos no console para facilitar a consulta.
-                   -Você deve interagir com as caixa de diálogos ou de opções para avançar no jogo.
-                   -Cada escolha sua tem consequências escolha com cuidado.
+                   -Dados e informações importantes serão impresos no console para facilitar a consulta.
+                   -Você deve interagir com as caixas de diálogos ou de opções para avançar no jogo.
+                   -Cada escolha sua tem consequêcias. Escolha com cuidado!
                    -Acerte o culpado para continuar para outro caso.
                 
                                                                             Boa Sorte!!!
@@ -75,21 +75,22 @@ public class Investigacao {
         if(CONTROLADOR==1){
             String titulo1Dia = "1º Dia";
             String texto1Dia = """
-                Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalha em caso mais
-                importante e relevante. Logo em seu primeiro dia você está indo para o seu trabalho e recebe uma messagem:
+                 Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalhar em alguns casos mais
+                 importantes. No seu primeiro dia a caminho do trabalho, você recebe uma mensagem:
                      Capitão Novo
-                   Bom dia novato, deixei vários casos em sua mesa dê uma olhada neles e para mais informações
-                   vá até o legista. Considere esse seu presente de boas vindas                                                                                               
+                   Bom dia novato, deixei vários casos em sua mesa. De uma olhada neles e para mais informações
+                   vá até o legista. Conside esse seu presente de boas vindas.                             
                 """;
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura02.wav", texto1Dia, titulo1Dia);
         }else{
             JOptionPane.showMessageDialog(
                     null,
                     """
-                     Você acaba de conseguir passar de frase
-                     A cada frase o jogo vai ficando mais dificil e desafiador                           
+                     Ótimo, agora podemos ir para o próximo crime.
+                     
+                     A cada fase o jogo ficará mais díficil.                      
                     """,
-                    "Proxima Frase",
+                    "Próximo crime",
                     JOptionPane.INFORMATION_MESSAGE);
         }
         System.out.print(ESPACO+"                 CASO " + CONTROLADOR + "º" + ESPACO);
@@ -120,11 +121,13 @@ public class Investigacao {
         if(CONTROLADOR==1){
             String titulo1Dica = "Dica - Anotações";
             String texto1Dica = """
-                Assim que você vai avançado no caso, terão algumas anotações, dicas e informações importantes no console.
-                As informações são separadas em cores:
-                    Azul - São informações que te forneceram sobre o caso
-                    Verde - São obesevações que 'você' fez.
-                    Roxo - São possiveis suspeitos                                                                                              
+                Conforme o avanço do caso, você recebera algumas anotações, dicas e informações que serão de grande importância 
+                para solução dos casos. (Serão impressas no console) 
+                
+                Cada informação é separada por uma cor:
+                Azul - Informações conseguidas sobre o caso.
+                Verde - Observações que foram feitas por 'você'.
+                Roxo - Nomes dos possíveis suspeitos. 
                 """;
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura03.wav", texto1Dica, titulo1Dica);
         }
@@ -135,19 +138,20 @@ public class Investigacao {
         JOptionPane.showMessageDialog(
                 null,
                 """
-                Após ler um pouco das informações sobre o caso você decide
-                levantar e ir atrás do legista para saber um pouco mais.
+                Como as informações que foram fornecidas até agora são limitadas,
+                você decide ir atrás do legista em busca de informações mais técnicas.
                 """,
-                "Consequencia",
+                "Consequência",
                 JOptionPane.INFORMATION_MESSAGE
         );
         System.out.println(GREEN+"Necrotério fica a esquerda da sala\n do capitão no final do corredor."+RESET);
         JOptionPane.showMessageDialog(
                 null,
                 """
-                Depois de andar um pouco você achar o necrotério e uma placa:
-                   !FAÇA SILENCIO!
-                Então você abre a porta cuidadosamente e entra.
+                Ao chegar ao local, você procura pelo legista que de acordo com informações está no necrotério.
+                Andando pelos corredores você encontra o seu destino.
+                
+                Silenciosamente você abre a porta e se depara com um senhor mexendo em um cadáver. 
                 """,
                 "necrotério Silecioso",
                 JOptionPane.INFORMATION_MESSAGE
@@ -161,12 +165,12 @@ public class Investigacao {
         JOptionPane.showMessageDialog(
                 null,
                 """
-                Você volta para sua mesa e da uma olhada final nas informações e em suas anotações.
-                Mas mesmo tendo alguma ideia do que pode ter acontecido, você não tem nenhum nome
-                de suspeito.
-                Mas ao examinar melhor sua mesa você encontra dentro da graveta várias ficha de suspeitos.
+                Você vai até sua mesa e analisa todas as informações e anotações .
+                A partir disso, você têm uma ideia do que pode ter acontecido, porém não tem nomes de um possível suspeito.
+                
+                Ao abrir uma de suas gavetas encontra várias fichas criminais de possíveis suspeitos.   
                 """,
-                "Consequencia",
+                "Consequência",
                 JOptionPane.INFORMATION_MESSAGE
         );
         System.out.println("=================");
@@ -185,9 +189,10 @@ public class Investigacao {
             JOptionPane.showMessageDialog(
                     null,
                     """
-                    Esse nomes em roxos no console são os pricipais suspeito de uma olha nas ficha dele
-                    para ter uma ideia de quem e o culpado.
-                    Caso queria ver alguma informação novamente basta olha no console.
+                     Os nomes dos possíveis suspeitos serão impressos em cor roxa no console.
+                    Você poderá ter uma ideia de quem foi o culpado do crime.
+                    
+                    Todas as informações anteriores estão presentes no console, caso precisem ser analisadas novamente.
                     """,
                     "Dica - Suspeitos",
                     JOptionPane.INFORMATION_MESSAGE
@@ -195,7 +200,7 @@ public class Investigacao {
         while (SUCESSO) {
             String chute = JOptionPane.showInputDialog("Quem é o culpado?");
             if (chute.equalsIgnoreCase(CULPADO)) {
-                System.out.println("Sim, e ele mesmo");
+                System.out.println("Sim, é ele mesmo");
                 SUCESSO = true;
                 return;
             } else if (chute.equalsIgnoreCase(INOCENTES[0])) {
@@ -218,7 +223,7 @@ public class Investigacao {
     public static void epilogo() throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         System.out.println(ESPACO);
         if (SUCESSO) {
-            JOptionPane.showMessageDialog(null,"Seu papite estava CERTO" ,
+            JOptionPane.showMessageDialog(null,"Você descobriu o autor do crime!" ,
                     "Resultado",JOptionPane.INFORMATION_MESSAGE,null);
             System.out.println(GREEN + "Consegui ACERTAR o meu "+ CONTROLADOR +"º caso" + RESET);
             System.out.println(BLUE + RESUMO2 + RESET);
