@@ -12,6 +12,8 @@ package Who_killed.frontend;
 
 import Who_killed.Investigacao;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,6 +38,10 @@ public class Lobby {
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                } catch (UnsupportedAudioFileException ex) {
+                    throw new RuntimeException(ex);
+                } catch (LineUnavailableException ex) {
                     throw new RuntimeException(ex);
                 }
             }

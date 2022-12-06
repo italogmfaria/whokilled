@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6581fa89-2fad-43a2-8249-6bac0887ebdd" name="Changes" comment="" />
+    <list default="true" id="3db55fd7-e184-44af-9043-5aa1ac902778" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2IUVDmZZHZVXXLEGvKmoTtTWnq9" />
+  <component name="ProjectId" id="2IWBrUNbwgjte8Qbf6Tsqs4irSs" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,37 +18,18 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/josej/IdeaProjects/Projetos Antigos"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Lobby" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Who_killed.frontend.Lobby" />
-      <module name="whokilled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Who_killed.frontend.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Lobby" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6581fa89-2fad-43a2-8249-6bac0887ebdd" name="Changes" comment="" />
-      <created>1670236035646</created>
+      <changelist id="3db55fd7-e184-44af-9043-5aa1ac902778" name="Changes" comment="" />
+      <created>1670287661409</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670236035646</updated>
+      <updated>1670287661409</updated>
     </task>
     <servers />
   </component>

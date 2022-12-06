@@ -9,6 +9,7 @@ git push -u origin main
  */
 package Who_killed;
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.io.*;
 import java.util.Random;
@@ -33,16 +34,15 @@ public class Investigacao {
     public static Random gerador = new Random();
     public static File arquivo = new File("Who_killed/jogador.txt");
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         regras();
         registraJogador(); //Esse e o metodo que vai pegar o nome de o nick do jogador e salvar.
         jogo();//Esse metodo e o corpo do jogo
     }
 
-    public static void regras() {
-        JOptionPane.showMessageDialog(
-                null,
-                """
+    public static void regras() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+        String tituloRegra = "Boas Vindas";
+        String textoRegra = """
                 Bem Vindo ao Who Killed, o melhor e mais bem feito jogo de investigação
                 O jogo funciona da seguinte maneira:
                    -Dados e informações importantes serão impressos no console para facilitar a consulta.
@@ -51,10 +51,9 @@ public class Investigacao {
                    -Acerte o culpado para continuar para outro caso.
                 
                                                                             Boa Sorte!!!
-                """,
-                "Boas Vindas!",
-                JOptionPane.INFORMATION_MESSAGE
-        );
+                """;
+        Who_killed.ReprodutorAudio.leitura("Audios/Leitura01.wav", textoRegra, tituloRegra);
+
     }
 
     public static void registraJogador() throws IOException {
