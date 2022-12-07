@@ -22,7 +22,7 @@ public class Investigacao {
     public static final String PURPLE = "\u001B[35m";
     public static final String GREEN = "\u001B[32m";
     public static final String RED = "\u001B[31m";
-    public static String CULPADO, CAMINHO, RESUMO1, RESUMO2, DIALOGO01, DIALOGO02, DIALOGO03, NOME, NICK,DIALOGO04,DIALOGO05,DIALOGO06,DIALOGO07 ;
+    public static String CULPADO, CAMINHO, RESUMO1, RESUMO2, DIALOGO01, DIALOGO02, DIALOGO03, NOME, NICK, DIALOGO04, DIALOGO05, DIALOGO06, DIALOGO07;
     public static String[] INOCENTES = new String[3];
     public static String ESPACO = "\n-------------------------------------------\n";
     public static boolean SUCESSO = true;
@@ -41,18 +41,18 @@ public class Investigacao {
     }
 
     public static void regras() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-        String tituloRegra = "Boas Vindas";
-        String textoRegra = """
+        String tituloLeitura01 = "Boas Vindas";
+        String textoLeitura01 = """
                 Bem Vindo ao Who Killed, o melhor e mais bem feito jogo de investigação.
                 O jogo funciona da seguinte maneira:
                    -Dados e informações importantes serão impresos no console para facilitar a consulta.
                    -Você deve interagir com as caixas de diálogos ou de opções para avançar no jogo.
                    -Cada escolha sua tem consequêcias. Escolha com cuidado!
                    -Acerte o culpado para continuar para outro caso.
-                
-                                                                            Boa Sorte!!!
+                                
+                                                                                Boa Sorte!!!
                 """;
-        Who_killed.ReprodutorAudio.leitura("Audios/Leitura01.wav", textoRegra, tituloRegra);
+        Who_killed.ReprodutorAudio.leitura("Audios/Leitura01.wav", textoLeitura01, tituloLeitura01);
 
     }
 
@@ -72,28 +72,28 @@ public class Investigacao {
     }
 
     public static void pistasDoCrime() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
-        if(CONTROLADOR==1){
-            String titulo1Dia = "1º Dia";
-            String texto1Dia = """
-                 Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalhar em alguns casos mais
-                 importantes. No seu primeiro dia a caminho do trabalho, você recebe uma mensagem:
-                     Capitão Novo
-                   Bom dia novato, deixei vários casos em sua mesa. De uma olhada neles e para mais informações
-                   vá até o legista. Conside esse seu presente de boas vindas.                             
-                """;
-            Who_killed.ReprodutorAudio.leitura("Audios/Leitura02.wav", texto1Dia, titulo1Dia);
-        }else{
+        if (CONTROLADOR == 1) {
+            String tituloLeitura02 = "1º Dia";
+            String textoLeitura02 = """
+                     Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalhar em alguns casos mais
+                     importantes. No seu primeiro dia a caminho do trabalho, você recebe uma mensagem:
+                         Capitão Novo
+                       Bom dia novato, deixei vários casos em sua mesa. De uma olhada neles e para mais informações
+                       vá até o legista. Conside esse seu presente de boas vindas.                             
+                    """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura02.wav", textoLeitura02, tituloLeitura02);
+        } else {
             JOptionPane.showMessageDialog(
                     null,
                     """
-                     Ótimo, agora podemos ir para o próximo crime.
-                     
-                     A cada fase o jogo ficará mais díficil.                      
-                    """,
+                             Ótimo, agora podemos ir para o próximo crime.
+                             
+                             A cada fase o jogo ficará mais díficil.                      
+                            """,
                     "Próximo crime",
                     JOptionPane.INFORMATION_MESSAGE);
         }
-        System.out.print(ESPACO+"                 CASO " + CONTROLADOR + "º" + ESPACO);
+        System.out.print(ESPACO + "                 CASO " + CONTROLADOR + "º" + ESPACO);
         Scanner input = new Scanner(new File(CAMINHO));
         CULPADO = input.nextLine();
         INOCENTES[0] = input.nextLine();
@@ -110,69 +110,64 @@ public class Investigacao {
         while (input.hasNext()) {
             System.out.println(input.nextLine());
         }
-        if(CONTROLADOR ==1) {
+        if (CONTROLADOR == 1) {
             System.out.println(GREEN + "\nO capitão deixou esses casos para me testar?" +
                     "\nAhh, ele só deve precisar de uma opinião diferente. Né?" + RESET);
-        }else{
+        } else {
             System.out.println(GREEN + "\nHum esse caso parece " +
                     "\n\tser mais desafiador" + RESET);
         }
         System.out.println(ESPACO);
-        if(CONTROLADOR==1){
-            String titulo1Dica = "Dica - Anotações";
-            String texto1Dica = """
-                Conforme o avanço do caso, você recebera algumas anotações, dicas e informações que serão de grande importância 
-                para solução dos casos. (Serão impressas no console) 
-                
-                Cada informação é separada por uma cor:
-                Azul - Informações conseguidas sobre o caso.
-                Verde - Observações que foram feitas por 'você'.
-                Roxo - Nomes dos possíveis suspeitos. 
-                """;
-            Who_killed.ReprodutorAudio.leitura("Audios/Leitura03.wav", texto1Dica, titulo1Dica);
+        if (CONTROLADOR == 1) {
+            String tituloLeitura03 = "Dica - Anotações";
+            String textoLeitura03 = """
+                    Conforme o avanço do caso, você recebera algumas anotações, dicas e informações que serão de grande importância 
+                    para solução dos casos. (Serão impressas no console) 
+                                    
+                    Cada informação é separada por uma cor:
+                    Azul - Informações conseguidas sobre o caso.
+                    Verde - Observações que foram feitas por 'você'.
+                    Roxo - Nomes dos possíveis suspeitos. 
+                    """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura03.wav", textoLeitura03, tituloLeitura03);
         }
 
     }
 
-    public static void falaComLegista() throws InterruptedException {
-        JOptionPane.showMessageDialog(
-                null,
-                """
+    public static void falaComLegista() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
+        String tituloLeitura04 = "Mais Informações";
+        String textoLeitura04 = """
                 Como as informações que foram fornecidas até agora são limitadas,
-                você decide ir atrás do legista em busca de informações mais técnicas.
-                """,
-                "Consequência",
-                JOptionPane.INFORMATION_MESSAGE
-        );
-        System.out.println(GREEN+"Necrotério fica a esquerda da sala\n do capitão no final do corredor."+RESET);
-        JOptionPane.showMessageDialog(
-                null,
-                """
+                 você decide ir atrás do legista em busca de informações mais técnicas.
+                 """;
+        Who_killed.ReprodutorAudio.leitura("Audios/Leitura04.wav", textoLeitura04, tituloLeitura04);
+
+        if (CONTROLADOR == 1) {
+            System.out.println(GREEN + "Necrotério fica a esquerda da sala\n do capitão no final do corredor." + RESET);
+        }
+
+        String tituloLeitura05 = "Necrotério";
+        String textoLeitura05 = """
                 Ao chegar ao local, você procura pelo legista que de acordo com informações está no necrotério.
-                Andando pelos corredores você encontra o seu destino.
-                
-                Silenciosamente você abre a porta e se depara com um senhor mexendo em um cadáver. 
-                """,
-                "necrotério Silecioso",
-                JOptionPane.INFORMATION_MESSAGE
-        );
+                        Andando pelos corredores você encontra o seu destino.
+                                        
+                        Silenciosamente você abre a porta e se depara com um senhor mexendo em um cadáver. 
+                 """;
+        Who_killed.ReprodutorAudio.leitura("Audios/Leitura05.wav", textoLeitura05, tituloLeitura05);
         String[] stg = new String[0];
         Who_killed.Legista.main(stg);
     }
 
-    public static void vereditoDoCaso() throws InterruptedException {
+    public static void vereditoDoCaso() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
         System.out.println(ESPACO);
-        JOptionPane.showMessageDialog(
-                null,
-                """
+        String tituloLeitura06 = "Minha mesa";
+        String textoLeitura06 = """
                 Você vai até sua mesa e analisa todas as informações e anotações .
                 A partir disso, você têm uma ideia do que pode ter acontecido, porém não tem nomes de um possível suspeito.
-                
-                Ao abrir uma de suas gavetas encontra várias fichas criminais de possíveis suspeitos.   
-                """,
-                "Consequência",
-                JOptionPane.INFORMATION_MESSAGE
-        );
+                                        
+                Mas ao abrir uma de suas gavetas encontra várias fichas criminais de possíveis suspeitos.   
+                 """;
+        Who_killed.ReprodutorAudio.leitura("Audios/Leitura06.wav", textoLeitura06, tituloLeitura06);
         System.out.println("=================");
         int random = gerador.nextInt(3) + 1;
         int cont = 0;
@@ -185,18 +180,19 @@ public class Investigacao {
             }
         }
         System.out.println("=================");
-        if(CONTROLADOR==1){
+        if (CONTROLADOR == 1) {
             JOptionPane.showMessageDialog(
                     null,
                     """
-                     Os nomes dos possíveis suspeitos serão impressos em cor roxa no console.
-                    Você poderá ter uma ideia de quem foi o culpado do crime.
-                    
-                    Todas as informações anteriores estão presentes no console, caso precisem ser analisadas novamente.
-                    """,
+                             Os nomes dos possíveis suspeitos serão impressos em cor roxa no console.
+                            Você poderá ter uma ideia de quem foi o culpado do crime.
+                                                
+                            Todas as informações anteriores estão presentes no console, caso precisem ser analisadas novamente.
+                            """,
                     "Dica - Suspeitos",
                     JOptionPane.INFORMATION_MESSAGE
-            );}
+            );
+        }
         while (SUCESSO) {
             String chute = JOptionPane.showInputDialog("Quem é o culpado?");
             if (chute.equalsIgnoreCase(CULPADO)) {
@@ -213,8 +209,8 @@ public class Investigacao {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
             } else {
-                JOptionPane.showMessageDialog(null,"O que? Esse nome não está na lista de suspeitos, melhor ler novamente.",
-                        "Que?",JOptionPane.INFORMATION_MESSAGE,null);
+                JOptionPane.showMessageDialog(null, "O que? Esse nome não está na lista de suspeitos, melhor ler novamente.",
+                        "Que?", JOptionPane.INFORMATION_MESSAGE, null);
 
             }
         }
@@ -223,9 +219,9 @@ public class Investigacao {
     public static void epilogo() throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         System.out.println(ESPACO);
         if (SUCESSO) {
-            JOptionPane.showMessageDialog(null,"Você descobriu o autor do crime!" ,
-                    "Resultado",JOptionPane.INFORMATION_MESSAGE,null);
-            System.out.println(GREEN + "Consegui ACERTAR o meu "+ CONTROLADOR +"º caso" + RESET);
+            JOptionPane.showMessageDialog(null, "Você descobriu o autor do crime!",
+                    "Resultado", JOptionPane.INFORMATION_MESSAGE, null);
+            System.out.println(GREEN + "Consegui ACERTAR o meu " + CONTROLADOR + "º caso" + RESET);
             System.out.println(BLUE + RESUMO2 + RESET);
             System.out.println("Pontuação --- " + PONTOS);
             PONTOCADACASO[CONTROLADOR] = 1;
@@ -234,14 +230,14 @@ public class Investigacao {
                 jogo();
             } else {
                 CONTROLADOR--;
-                JOptionPane.showMessageDialog(null,"Parabéns Você Acertou Todos os Casos",
-                        "Epilogo",JOptionPane.INFORMATION_MESSAGE,null);
+                JOptionPane.showMessageDialog(null, "Parabéns Você Acertou Todos os Casos",
+                        "Epilogo", JOptionPane.INFORMATION_MESSAGE, null);
                 imprimirResumoFinal();
             }
         } else {
-            JOptionPane.showMessageDialog(null,"Seu papite estava ERRADO" ,
-                    "Fim de Jogo",JOptionPane.INFORMATION_MESSAGE,null);
-            System.out.println(GREEN + "Eu ERREI o meu "+ CONTROLADOR +"º caso" + RESET);
+            JOptionPane.showMessageDialog(null, "Seu papite estava ERRADO",
+                    "Fim de Jogo", JOptionPane.INFORMATION_MESSAGE, null);
+            System.out.println(GREEN + "Eu ERREI o meu " + CONTROLADOR + "º caso" + RESET);
             System.out.println(BLUE + RESUMO2 + RESET);
             PONTOCADACASO[CONTROLADOR] = 0;
             imprimirResumoFinal();
