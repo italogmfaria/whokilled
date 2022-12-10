@@ -121,6 +121,11 @@ public class Legista {
             case 0:
                 String tituloLeituraB_3 = "Como seria o assasino?";
                 consequenciaB1 = Investigacao.DIALOGO05;
+                /*
+                *
+                * CONVERTER O ARQUIVO
+                *
+                * */
                 Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB1, tituloLeituraB_3);
                 System.out.println(Investigacao.GREEN + "\n" + "Tem alguma dica de como seria o assasino?" + "\n" +
                         consequenciaB1 + Investigacao.RESET);

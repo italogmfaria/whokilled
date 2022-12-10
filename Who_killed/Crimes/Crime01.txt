@@ -3,12 +3,12 @@ Nome Inocente 1
 Nome Inocente 2
 Nome Inocente 3
 Resumo Final Do Caso
-Mulher loira, de meia idade, sem nenhum ferrimento exporto ou sinal de briga, ela está "quase" em prefeito estado.
+Mulher loira, de meia-idade, sem nenhum ferrimento exporto ou sinal de briga, ela está "quase" em prefeito estado.
 Mulher solteira com menos de 1,7 metros, com 59 kilos, tinha 46 anos, com cabelos lisos e loiros chegou com roupa esportivas.
 Sem nenhum ferimento externo oque significa que a morte deve ser alguma causa interna. Um pouco nova para infrato.
 Com certeza não se trata de um assalto.
-Dialogo 5
-Dialogo 6
+Quem fez isso, com certeza estava irritado.
+Parece que tudo aconteceu por acaso. Não era para ter esse final.
 Morte natural? Evenamento? Asfixia?
 
 [31mFICHA DO CASO 01:[0m
