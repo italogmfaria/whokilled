@@ -1,2 +1,3 @@
 *Nome = dfsfdsf 	*Nick = fdsfsdf 	 *Pontuação = 0
 *Nome =  	*Nick =  	 *Pontuação = 3
+*Nome =  	*Nick =  	 *Pontuação = 3
