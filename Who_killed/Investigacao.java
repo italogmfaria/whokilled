@@ -50,7 +50,7 @@ public class Investigacao {
                    -Cada escolha sua tem consequêcias. Escolha com cuidado!
                    -Acerte o culpado para continuar para outro caso.
                                 
-                                                                                Boa Sorte!!!
+                                                                               Boa Sorte!!!
                 """;
         Who_killed.ReprodutorAudio.leitura("Audios/Leitura01.wav", textoLeitura01, tituloLeitura01);
 
@@ -77,21 +77,18 @@ public class Investigacao {
             String textoLeitura02 = """
                      Você é um jovem investigador que acabou de ser transferido de sua cidade para trabalhar em alguns casos mais
                      importantes. No seu primeiro dia a caminho do trabalho, você recebe uma mensagem:
-                         Capitão Novo
+                         Capitão
                        Bom dia novato, deixei vários casos em sua mesa. De uma olhada neles e para mais informações
                        vá até o legista. Conside esse seu presente de boas vindas.                             
                     """;
-            Who_killed.ReprodutorAudio.leitura("Audios/Leitura02.wav", textoLeitura02, tituloLeitura02);
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura02a.wav", textoLeitura02, tituloLeitura02);
         } else {
-            JOptionPane.showMessageDialog(
-                    null,
-                    """
-                             Ótimo, agora podemos ir para o próximo crime.
-                             
-                             A cada fase o jogo ficará mais díficil.                      
-                            """,
-                    "Próximo crime",
-                    JOptionPane.INFORMATION_MESSAGE);
+            String tituloLeitura02 = "Próximo crime";
+            String textoLeitura02 = """
+                     Ótimo, agora podemos ir para o próximo crime.
+                     A cada fase o jogo ficará mais difícil.                            
+                    """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura02b.wav", textoLeitura02, tituloLeitura02);
         }
         System.out.print(ESPACO + "                 CASO " + CONTROLADOR + "º" + ESPACO);
         Scanner input = new Scanner(new File(CAMINHO));
@@ -114,7 +111,7 @@ public class Investigacao {
             System.out.println(GREEN + "\nO capitão deixou esses casos para me testar?" +
                     "\nAhh, ele só deve precisar de uma opinião diferente. Né?" + RESET);
         } else {
-            System.out.println(GREEN + "\nHum esse caso parece " +
+            System.out.println(GREEN + "\n\tHum esse caso parece " +
                     "\n\tser mais desafiador" + RESET);
         }
         System.out.println(ESPACO);
@@ -135,39 +132,64 @@ public class Investigacao {
     }
 
     public static void falaComLegista() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
+        if (CONTROLADOR > 1) {
+            String tituloLeitura12 = "Proximo Caso";
+            String textoLeitura12 = """
+                    Você conseguiu acertar o caso anterior, agora você pega outra das fichas de sua 
+                    mesa e se encontra em uma situação que precisa de mais informação, como antes.
+                     """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura12.wav", textoLeitura12, tituloLeitura12);
+        }
         String tituloLeitura04 = "Mais Informações";
         String textoLeitura04 = """
                 Como as informações que foram fornecidas até agora são limitadas,
                  você decide ir atrás do legista em busca de informações mais técnicas.
                  """;
         Who_killed.ReprodutorAudio.leitura("Audios/Leitura04.wav", textoLeitura04, tituloLeitura04);
-
         if (CONTROLADOR == 1) {
             System.out.println(GREEN + "Necrotério fica a esquerda da sala\n do capitão no final do corredor." + RESET);
+            String tituloLeitura05 = "Necrotério";
+            String textoLeitura05 = """
+                    Ao chegar ao local, você procura pelo legista que de acordo com informações está no necrotério.
+                    Andando pelos corredores você encontra o seu destino.
+                                            
+                    Silenciosamente você abre a porta e se depara com um senhor mexendo em um cadáver. 
+                     """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura05a.wav", textoLeitura05, tituloLeitura05);
+        } else {
+            String tituloLeitura05 = "Necrotério";
+            String textoLeitura05 = """
+                    Você novamente vai até a sala do legista, dessa vez ele está mexendo em um corpo,
+                    é ele parece está muito distraído.
+                    Você olha mais pela sala e vê outros corpos e mais fichas.                                             
+                        """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura05b.wav", textoLeitura05, tituloLeitura05);
         }
-
-        String tituloLeitura05 = "Necrotério";
-        String textoLeitura05 = """
-                Ao chegar ao local, você procura pelo legista que de acordo com informações está no necrotério.
-                        Andando pelos corredores você encontra o seu destino.
-                                        
-                        Silenciosamente você abre a porta e se depara com um senhor mexendo em um cadáver. 
-                 """;
-        Who_killed.ReprodutorAudio.leitura("Audios/Leitura05.wav", textoLeitura05, tituloLeitura05);
         String[] stg = new String[0];
         Who_killed.Legista.main(stg);
     }
 
     public static void vereditoDoCaso() throws InterruptedException, UnsupportedAudioFileException, LineUnavailableException, IOException {
         System.out.println(ESPACO);
-        String tituloLeitura06 = "Minha mesa";
-        String textoLeitura06 = """
-                Você vai até sua mesa e analisa todas as informações e anotações .
-                A partir disso, você têm uma ideia do que pode ter acontecido, porém não tem nomes de um possível suspeito.
-                                        
-                Mas ao abrir uma de suas gavetas encontra várias fichas criminais de possíveis suspeitos.   
-                 """;
-        Who_killed.ReprodutorAudio.leitura("Audios/Leitura06.wav", textoLeitura06, tituloLeitura06);
+        if (CONTROLADOR == 1) {
+            String tituloLeitura06 = "Minha mesa";
+            String textoLeitura06 = """
+                    Você vai até sua mesa e analisa todas as informações e anotações .
+                    A partir disso, você têm uma ideia do que pode ter acontecido, porém não tem nomes de um possível suspeito.
+                                            
+                    Mas ao abrir uma de suas gavetas encontra várias fichas criminais de possíveis suspeitos.   
+                     """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura06a.wav", textoLeitura06, tituloLeitura06);
+        } else {
+            String tituloLeitura06 = "Minha mesa";
+            String textoLeitura06 = """
+                    Você vai até sua mesa e analisa todas as informações e anotações.
+                    A partir disso, você tem uma ideia do que pode ter acontecido, então 
+                    você abre a gaveta com as fichas criminais de possíveis suspeitos.
+                    Mas estão todas bagunçadas e juntas.
+                             """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura06b.wav", textoLeitura06, tituloLeitura06);
+        }
         System.out.println("=================");
         int random = gerador.nextInt(3) + 1;
         int cont = 0;
@@ -181,17 +203,13 @@ public class Investigacao {
         }
         System.out.println("=================");
         if (CONTROLADOR == 1) {
-            JOptionPane.showMessageDialog(
-                    null,
-                    """
-                             Os nomes dos possíveis suspeitos serão impressos em cor roxa no console.
-                            Você poderá ter uma ideia de quem foi o culpado do crime.
-                                                
-                            Todas as informações anteriores estão presentes no console, caso precisem ser analisadas novamente.
-                            """,
-                    "Dica - Suspeitos",
-                    JOptionPane.INFORMATION_MESSAGE
-            );
+            String tituloLeitura07 = "Dica - Suspeitos";
+            String textoLeitura07 = """
+                    Os nomes dos possíveis suspeitos serão impressos em cor roxa no console.
+                    Você poderá ter uma ideia de quem foi o culpado do crime.
+                    Todas as informações anteriores estão presentes no console, caso precisem ser analisadas novamente.                          
+                     """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura07.wav", textoLeitura07, tituloLeitura07);
         }
         while (SUCESSO) {
             String chute = JOptionPane.showInputDialog("Quem é o culpado?");
@@ -209,8 +227,11 @@ public class Investigacao {
                 System.out.println("Sim o culpado deve ser esse homem");
                 SUCESSO = false;
             } else {
-                JOptionPane.showMessageDialog(null, "O que? Esse nome não está na lista de suspeitos, melhor ler novamente.",
-                        "Que?", JOptionPane.INFORMATION_MESSAGE, null);
+                String tituloLeitura08 = "Que?";
+                String textoLeitura08 = """
+                        O que? Esse nome não está na lista de suspeitos, melhor ler novamente.                         
+                         """;
+                Who_killed.ReprodutorAudio.leitura("Audios/Leitura08.wav", textoLeitura08, tituloLeitura08);
 
             }
         }
@@ -219,8 +240,11 @@ public class Investigacao {
     public static void epilogo() throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         System.out.println(ESPACO);
         if (SUCESSO) {
-            JOptionPane.showMessageDialog(null, "Você descobriu o autor do crime!",
-                    "Resultado", JOptionPane.INFORMATION_MESSAGE, null);
+            String tituloLeitura09 = "Resultado";
+            String textoLeitura09 = """
+                    Você descobriu o autor do crime!                         
+                     """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura09.wav", textoLeitura09, tituloLeitura09);
             System.out.println(GREEN + "Consegui ACERTAR o meu " + CONTROLADOR + "º caso" + RESET);
             System.out.println(BLUE + RESUMO2 + RESET);
             System.out.println("Pontuação --- " + PONTOS);
@@ -230,13 +254,19 @@ public class Investigacao {
                 jogo();
             } else {
                 CONTROLADOR--;
-                JOptionPane.showMessageDialog(null, "Parabéns Você Acertou Todos os Casos",
-                        "Epilogo", JOptionPane.INFORMATION_MESSAGE, null);
+                String tituloLeitura10 = "Epilogo";
+                String textoLeitura10 = """
+                        Parabéns Você Acertou Todos os Casos!                       
+                         """;
+                Who_killed.ReprodutorAudio.leitura("Audios/Leitura10.wav", textoLeitura10, tituloLeitura10);
                 imprimirResumoFinal();
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Seu papite estava ERRADO",
-                    "Fim de Jogo", JOptionPane.INFORMATION_MESSAGE, null);
+            String tituloLeitura11 = "Fim de jogo";
+            String textoLeitura11 = """
+                    Seu palpite estava ERRADO. Fim de Jogo.                 
+                     """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura11.wav", textoLeitura11, tituloLeitura11);
             System.out.println(GREEN + "Eu ERREI o meu " + CONTROLADOR + "º caso" + RESET);
             System.out.println(BLUE + RESUMO2 + RESET);
             PONTOCADACASO[CONTROLADOR] = 0;

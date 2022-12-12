@@ -3,8 +3,8 @@ Nome Inocente 1
 Nome Inocente 2
 Nome Inocente 3
 Resumo Final Do Caso
-Mulher loira, de meia-idade, sem nenhum ferrimento exporto ou sinal de briga, ela está "quase" em prefeito estado.
-Mulher solteira com menos de 1,7 metros, com 59 kilos, tinha 46 anos, com cabelos lisos e loiros chegou com roupa esportivas.
+Mulher de meia-idade, sem nenhum ferrimento exposto ou sinal de briga, ela está "quase" em prefeito estado.
+Solteira com menos de 1,7 metros, 59 kilos, tinha 46 anos, com cabelos lisos e loiros chegou com roupa esportivas.
 Sem nenhum ferimento externo oque significa que a morte deve ser alguma causa interna. Um pouco nova para infrato.
 Com certeza não se trata de um assalto.
 Quem fez isso, com certeza estava irritado.
@@ -13,15 +13,15 @@ Morte natural? Evenamento? Asfixia?
 
 [31mFICHA DO CASO 01:[0m
 Nome da vítima: [34mMarcela Fernandes[0m
-Idade: [34m46 anos[0m
+Idade: [34m24 anos[0m
 Altura: [34m1,67m[0m
 Sexo: [34mFeminino[0m
 Peso: [34m59Kg[0m
-Data de Nascimento: [34m19/11/1976[0m
+Data de Nascimento: [34m19/11/1998[0m
 Estado Civil: [34mSolteira[0m
 Cabelo:[34m Loiro, Liso[0m
 Pele:[34mBranca[0m
-Profissão:[34m Trabalhava em uma loja de artigos infantis[0m
+Profissão:[34m Estudava e trabalhava em uma loja de artigos infantis[0m
 Roupas que estava vestida:[34m Roupa para praticar esportes[0m
 Tatuagem/Cicatriz: [34m--------------[0m
 Data do Assassinato: [34m27/02/2022[0m

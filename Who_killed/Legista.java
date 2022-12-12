@@ -8,27 +8,17 @@ import java.io.IOException;
 
 public class Legista {
     public static void main(String[] args) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-
-        //String nome = JOptionPane.showInputDialog("Digite alguma coisa");
-        //JOptionPane.showMessageDialog(null,nome,"teste",JOptionPane.INFORMATION_MESSAGE,null);
-        //System.out.println(Investigacao.GREEN + "\nCTTETETETETETET" + Investigacao.RESET);
         final Object[] optionsA = {
-                "Ir até ele",
+                "Ir até o legista",
                 "Bisbilhotar a sala",
                 "Sair da sala"
         };
-        final int n = JOptionPane.showOptionDialog(
-                null,
-                "Ao entrar na sala você tem que tomar um decisão: ",
-                "Necrotério",
-                JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                optionsA,
-                optionsA[2]
-        );
-        String consequenciaA = "";
-        switch (n) {
+        String textoLeituraA = """
+                Ao entrar na sala você tem que tomar um decisão: 
+                """;
+        String tituloLeituraA = "Necrotério";
+        //String consequenciaA = "";
+        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraA.wav", optionsA, textoLeituraA, tituloLeituraA)) {
             case 0:
                 /*consequenciaA = "Chegando até ele, você diz:
                         - Posso tomar um minuto do seu tempo?Acabei de ser transferido para esse caso. ";
@@ -37,7 +27,7 @@ public class Legista {
                 String tituloLeituraA1 = "Ir até ele";
                 String textoLeituraA1 = """
                         Chegando até ele, você diz: 
-                                - Posso tomar um minuto do seu tempo? Acabei de ser transferido para esse caso.
+                         - Posso tomar um minuto do seu tempo? Acabei de ser transferido para esse caso.
                         """;
                 Who_killed.ReprodutorAudio.leitura("Audios/LeituraA_1.wav", textoLeituraA1, tituloLeituraA1);
                 dialogoB();
@@ -73,11 +63,11 @@ public class Legista {
                 "A vítima oque pode falar mais sobre ela",
                 "Ah so gostaria de falar um oi"
         };
-        String textoLeituraB ="""
-                 Com tom irônico o legista diz: 
-                 - E ai novato, o que quer aqui?""";
+        String textoLeituraB = """
+                Com tom irônico o legista diz: 
+                - E ai novato, o que quer aqui?""";
         String tituloLeituraB = "Um minuto do seu tempo?";
-        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraB.wav",optionsB,textoLeituraB,tituloLeituraB)) {
+        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraB.wav", optionsB, textoLeituraB, tituloLeituraB)) {
             case 0:
                 String tituloLeituraB_1 = "Mais sobre o caso";
                 String textoLeituraB_1 = """
@@ -97,7 +87,7 @@ public class Legista {
                 dialogoB2();
                 break;
             case 2:
-                String tituloLeituraB_3 = "Mais sobre a vítima";
+                String tituloLeituraB_3 = "Sair da sala";
                 String textoLeituraB_3 = """
                         O legista te olha estranho e fala:
                         - Oi. Tá você sabe onde e a porta, to ocupado.
@@ -114,41 +104,28 @@ public class Legista {
                 "Tem alguma dica de como seria o assasino?",
                 "Algum detalhe te chama a ateção nesse caso?"
         };
-        String textoLeituraB1 =Investigacao.DIALOGO04;
+        String textoLeituraB1 = Investigacao.DIALOGO04;
         String tituloLeituraB1 = "Uma ficha na gaveta";
         String consequenciaB1;
-        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraCrime00_0.wav",optionsB1,textoLeituraB1,tituloLeituraB1)){
+        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraCrime00_0.wav", optionsB1, textoLeituraB1, tituloLeituraB1)) {
             case 0:
-                String tituloLeituraB_3 = "Como seria o assasino?";
+                String tituloLeituraB_3a = "Como seria o assasino?";
                 consequenciaB1 = Investigacao.DIALOGO05;
-                /*
-                *
-                * CONVERTER O ARQUIVO
-                *
-                * */
-                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB1, tituloLeituraB_3);
-                System.out.println(Investigacao.GREEN + "\n" + "Tem alguma dica de como seria o assasino?" + "\n" +
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB1, tituloLeituraB_3a);
+                System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB_3a + "\n" +
                         consequenciaB1 + Investigacao.RESET);
                 dialogoE();
                 break;
             case 1:
+                String tituloLeituraB_3b = "Algum detalhe te chama a ateção nesse caso?";
                 consequenciaB1 = Investigacao.DIALOGO06;
-                dialogoB1A(consequenciaB1, "Algum detalhe te chama a ateção nesse caso?");
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB1, tituloLeituraB_3b);
+                System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB_3b + "\n" +
+                        consequenciaB1 + Investigacao.RESET);
+                dialogoE();
                 break;
 
         }
-    }
-
-    public static void dialogoB1A(String consequenciaB1, String pergunta) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-        JOptionPane.showMessageDialog(
-                null,
-                consequenciaB1,
-                "Necrotério",
-                JOptionPane.INFORMATION_MESSAGE
-        );
-        System.out.println(Investigacao.GREEN + "\n" + pergunta + "\n" +
-                consequenciaB1 + Investigacao.RESET);
-        dialogoE();
     }
 
     public static void dialogoB2() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
@@ -156,64 +133,62 @@ public class Legista {
                 "Fala mais sobre a vítima em sí",
                 "Conte mais sobre a morte dele(a)"
         };
-        final int n = JOptionPane.showOptionDialog(
-                null,
-                Investigacao.DIALOGO01,
-                "Necrotério",
-                JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                optionsB2,
-                optionsB2[1]
-        );
+        String textoLeituraB2 = Investigacao.DIALOGO01;
+        String tituloLeituraB2 = "Necrotério";
         String consequenciaB2 = "";
-        switch (n) {
+        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraCrime00_0.wav", optionsB2, textoLeituraB2, tituloLeituraB2)) {
             case 0:
+                String tituloLeituraB2a = "Fale mais sobre a vítima em sí";
                 consequenciaB2 = Investigacao.DIALOGO02;
-                dialogoB2A(consequenciaB2, "Fale mais sobre a vítima em sí");
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB2, tituloLeituraB2a);
+                System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB2a + "\n" +
+                        consequenciaB2 + Investigacao.RESET);
+                dialogoE();
                 break;
             case 1:
+                String tituloLeituraB2b = "Conte mais sobre a morte dele(a)";
                 consequenciaB2 = Investigacao.DIALOGO03;
-                dialogoB2A(consequenciaB2, "Conte mais sobre a morte dele(a)");
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB2, tituloLeituraB2b);
+                System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB2b + "\n" +
+                        consequenciaB2 + Investigacao.RESET);
+                dialogoE();
                 break;
 
         }
     }
 
-    public static void dialogoB2A(String consequenciaB2, String pergunta) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-        JOptionPane.showMessageDialog(
-                null,
-                consequenciaB2,
-                "Necrotério",
-                JOptionPane.INFORMATION_MESSAGE);
-        System.out.println(Investigacao.GREEN + "\n" + pergunta + "\n" +
-                consequenciaB2 + Investigacao.RESET);
-        dialogoE();
-    }
     public static void dialogoC() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         final Object[] optionsC = {
                 "Olhar o corpo",
                 "Ver as fichas"
         };
-        final int n = JOptionPane.showOptionDialog(
-                null,
-                "O corpo e a ficha batem com as informações recebidas anteriormente sobre a vítima do caso. " +
-                        "\n",
-                "Necrotério",
-                JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                optionsC,
-                optionsC[1]
-        );
+        String textoLeituraC = "O corpo e a ficha batem com as informações recebidas anteriormente sobre a vítima do caso.";
+        String tituloLeituraC = "Necrotério";
+
+
         String consequenciaC = "";
-        switch (n) {
+        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraC.wav", optionsC, textoLeituraC, tituloLeituraC)) {
             case 0:
-                dialogoC1();
+                String tituloLeituraC_1 = "Necrotério";
+                String textoLeituraC_1 = """
+                        Antes de você conseguir olhar o corpo mais de perto, escuta uma voz dizendo: 
+                        """;
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraC_1.wav", textoLeituraC_1, tituloLeituraC_1);
+                dialogoC3();
                 break;
             case 1:
                 consequenciaC = Investigacao.DIALOGO07;
-                dialogoC2(consequenciaC);
+                String tituloLeituraC_2 = "Necrotério";
+                String textoLeituraC_2 = """
+                        Ao olha mais de perto você encontra um pequeno bilhete em uma ficha do mesmo caso.
+                                E nele esta escrito: 
+                        """ + consequenciaC +
+                        "\nMas então você escuta:";
+                System.out.println(Investigacao.GREEN + "\nUm pequeno bilhete com anotações\n" +
+                        consequenciaC + Investigacao.RESET);
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraC_2.wav", textoLeituraC_2, tituloLeituraC_2);
+
+                dialogoC3();
                 break;
 
 
@@ -221,30 +196,6 @@ public class Legista {
 
     }
 
-    public static void dialogoC1() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-        JOptionPane.showMessageDialog(
-                null,
-                "Quando você começa a olhar o corpo mais de perto, escuta uma voz dizendo: ",
-                "Necrotério",
-                JOptionPane.INFORMATION_MESSAGE
-        );
-        dialogoC3();
-    }
-
-    public static void dialogoC2(String consequenciaC) throws UnsupportedAudioFileException, LineUnavailableException, IOException {
-        JOptionPane.showMessageDialog(
-                null,
-                "Ao olha mais de perto você encontra um pequeno bilhete em uma ficha do mesmo caso.\n" +
-                        "E nele esta escrito:\n" +
-                        consequenciaC +
-                        "\nMas então você escuta:",
-                "Necrotério",
-                JOptionPane.INFORMATION_MESSAGE
-        );
-        System.out.println(Investigacao.GREEN + "\nUm pequeno bilhete com anotações\n" +
-                consequenciaC + Investigacao.RESET);
-        dialogoC3();
-    }
 
     public static void dialogoC3() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
         String tituloLeituraC3 = "Necrotério";
