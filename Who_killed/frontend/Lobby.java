@@ -48,7 +48,7 @@ public class Lobby {
         });
     }
     public static void main(String[] args) {
-        JFrame panel1 = new JFrame("MyForm");
+        JFrame panel1 = new JFrame("WhoKilled");
         panel1.setContentPane(new Lobby().panel1);
         panel1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         panel1.pack();
