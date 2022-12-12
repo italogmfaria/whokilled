@@ -240,15 +240,15 @@ public class Investigacao {
     public static void epilogo() throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         System.out.println(ESPACO);
         if (SUCESSO) {
+            PONTOS++;
             String tituloLeitura09 = "Resultado";
             String textoLeitura09 = """
                     Você descobriu o autor do crime!                         
                      """;
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura09.wav", textoLeitura09, tituloLeitura09);
             System.out.println(GREEN + "Consegui ACERTAR o meu " + CONTROLADOR + "º caso" + RESET);
-            System.out.println(BLUE + RESUMO2 + RESET);
+            System.out.println(BLUE + RESUMO1 + RESET);
             System.out.println("Pontuação --- " + PONTOS);
-            PONTOCADACASO[CONTROLADOR] = 1;
             CONTROLADOR++;
             if (CONTROLADOR < 4) {
                 jogo();
@@ -268,9 +268,10 @@ public class Investigacao {
                      """;
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura11.wav", textoLeitura11, tituloLeitura11);
             System.out.println(GREEN + "Eu ERREI o meu " + CONTROLADOR + "º caso" + RESET);
-            System.out.println(BLUE + RESUMO2 + RESET);
+            System.out.println(BLUE + RESUMO1 + RESET);
             PONTOCADACASO[CONTROLADOR] = 0;
             imprimirResumoFinal();
+
         }
     }
 
@@ -279,22 +280,28 @@ public class Investigacao {
         System.out.println("\t========== Resumo final ==========");
         System.out.println("\t Jogador ---> " + NOME);
         System.out.println("\t Nick  --->  " + NICK);
-        System.out.println("\t Pontuação:");
-        for (int i = 1; i <= CONTROLADOR; i++) {
-            System.out.println("\t\t Caso " + i + "º ---> " + PONTOCADACASO[i] + " Pontos");
-            PONTOS += PONTOCADACASO[i];
-        }
         System.out.println("\t Pontuação Final ---> " + PONTOS);
+        System.out.println("\t========== ============ ==========");
         System.out.println(ESPACO);
         writeFile();
+        imprimirTodasPontuacoes();
     }
 
     public static void writeFile() throws IOException {
         FileWriter fw = new FileWriter(arquivo, true);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(String.format("*Nome = %s \t*Nick = %s \t *Pontuação = %d", NOME, NICK, PONTOS));
+        bw.write(String.format("-Nome = %s \t-Nick = %s \t -Pontuação = %d/3", NOME, NICK, PONTOS));
         bw.newLine();
         bw.close();
         fw.close();
+    }
+    public static void imprimirTodasPontuacoes() throws FileNotFoundException {
+        Scanner input = new Scanner(new File("Who_killed/jogador.txt"));
+        System.out.println(RED+"Registro de Jogadores:" +RESET);
+        System.out.println(ESPACO);
+        while(input.hasNext()) {
+            System.out.println(input.nextLine());
+            System.out.println(ESPACO);
+        }
     }
 }

@@ -3,7 +3,7 @@ Nome Inocente 1
 Nome Inocente 2
 Nome Inocente 3
 Resumo Final Do Caso
-+27 anos, mulher. Um corte foi feito na sua boca, como um "sorriso de sarcasmo". O corpo não foi violado.
+27 anos, mulher. Um corte foi feito na sua boca, como um "sorriso de sarcasmo". O corpo não foi violado.
 Casada, 1,68 de altura e 68Kg. Cabelo preto e pelo que parece sempre utiliza ele preso. Estava bem vestida.
 Ela sangrou até morrer. O corte na boca foi feito com ela ainda viva.
 Nada foi roubado da vítima. Ela sofreu lentamente.
@@ -11,7 +11,7 @@ Quem fez isso, só queria ver ela sofrendo.
 O corte na boca é um Sorriso de Glasgow. Essa é a terceira vítima com esse corte. Pode ser uma marca.
 Morte por sangramento.
 
-+[31mFICHA DO CASO 02:[0m
+[31mFICHA DO CASO 02:[0m
 Nome da vítima: [34mElisa Fernandes[0m
 Idade: [34m27 anos[0m
 Altura: [34m1,68m[0m

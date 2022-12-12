@@ -107,11 +107,11 @@ public class Legista {
         String textoLeituraB1 = Investigacao.DIALOGO04;
         String tituloLeituraB1 = "Uma ficha na gaveta";
         String consequenciaB1;
-        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraCrime00_0.wav", optionsB1, textoLeituraB1, tituloLeituraB1)) {
+        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraCrime0"+Investigacao.CONTROLADOR+"_4.wav", optionsB1, textoLeituraB1, tituloLeituraB1)) {
             case 0:
                 String tituloLeituraB_3a = "Como seria o assasino?";
                 consequenciaB1 = Investigacao.DIALOGO05;
-                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB1, tituloLeituraB_3a);
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime0"+Investigacao.CONTROLADOR+"_5.wav", consequenciaB1, tituloLeituraB_3a);
                 System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB_3a + "\n" +
                         consequenciaB1 + Investigacao.RESET);
                 dialogoE();
@@ -119,7 +119,7 @@ public class Legista {
             case 1:
                 String tituloLeituraB_3b = "Algum detalhe te chama a ateção nesse caso?";
                 consequenciaB1 = Investigacao.DIALOGO06;
-                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB1, tituloLeituraB_3b);
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime0"+Investigacao.CONTROLADOR+"_6.wav", consequenciaB1, tituloLeituraB_3b);
                 System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB_3b + "\n" +
                         consequenciaB1 + Investigacao.RESET);
                 dialogoE();
@@ -136,11 +136,11 @@ public class Legista {
         String textoLeituraB2 = Investigacao.DIALOGO01;
         String tituloLeituraB2 = "Necrotério";
         String consequenciaB2 = "";
-        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraCrime00_0.wav", optionsB2, textoLeituraB2, tituloLeituraB2)) {
+        switch (Who_killed.ReprodutorAudio.leituraEscolhas("Audios/LeituraCrime0"+Investigacao.CONTROLADOR+"_1.wav", optionsB2, textoLeituraB2, tituloLeituraB2)) {
             case 0:
                 String tituloLeituraB2a = "Fale mais sobre a vítima em sí";
                 consequenciaB2 = Investigacao.DIALOGO02;
-                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB2, tituloLeituraB2a);
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime0"+Investigacao.CONTROLADOR+"_2.wav", consequenciaB2, tituloLeituraB2a);
                 System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB2a + "\n" +
                         consequenciaB2 + Investigacao.RESET);
                 dialogoE();
@@ -148,7 +148,7 @@ public class Legista {
             case 1:
                 String tituloLeituraB2b = "Conte mais sobre a morte dele(a)";
                 consequenciaB2 = Investigacao.DIALOGO03;
-                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime00_0.wav", consequenciaB2, tituloLeituraB2b);
+                Who_killed.ReprodutorAudio.leitura("Audios/LeituraCrime0"+Investigacao.CONTROLADOR+"_3.wav", consequenciaB2, tituloLeituraB2b);
                 System.out.println(Investigacao.GREEN + "\n" + tituloLeituraB2b + "\n" +
                         consequenciaB2 + Investigacao.RESET);
                 dialogoE();
