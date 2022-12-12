@@ -69,6 +69,7 @@ public class Investigacao {
         vereditoDoCaso(); //Esse e o metodo que vai fazer o chute de quem e o assasino
         epilogo(); //Esse e o metodo final que vai falar se voce acertou ou nao e imprimir o resumo e salva a pontuação
 
+
     }
 
     public static void pistasDoCrime() throws IOException, UnsupportedAudioFileException, LineUnavailableException {
@@ -246,10 +247,12 @@ public class Investigacao {
                     Você descobriu o autor do crime!                         
                      """;
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura09.wav", textoLeitura09, tituloLeitura09);
+            imprimirResumoDoCaso();
             System.out.println(GREEN + "Consegui ACERTAR o meu " + CONTROLADOR + "º caso" + RESET);
             System.out.println(BLUE + RESUMO1 + RESET);
             System.out.println("Pontuação --- " + PONTOS);
             CONTROLADOR++;
+
             if (CONTROLADOR < 4) {
                 jogo();
             } else {
@@ -267,11 +270,11 @@ public class Investigacao {
                     Seu palpite estava ERRADO. Fim de Jogo.                 
                      """;
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura11.wav", textoLeitura11, tituloLeitura11);
+            imprimirResumoDoCaso();
             System.out.println(GREEN + "Eu ERREI o meu " + CONTROLADOR + "º caso" + RESET);
             System.out.println(BLUE + RESUMO1 + RESET);
             PONTOCADACASO[CONTROLADOR] = 0;
             imprimirResumoFinal();
-
         }
     }
 
@@ -295,13 +298,55 @@ public class Investigacao {
         bw.close();
         fw.close();
     }
+
     public static void imprimirTodasPontuacoes() throws FileNotFoundException {
         Scanner input = new Scanner(new File("Who_killed/jogador.txt"));
-        System.out.println(RED+"Registro de Jogadores:" +RESET);
+        System.out.println(RED + "Registro de Jogadores:" + RESET);
         System.out.println(ESPACO);
-        while(input.hasNext()) {
+        while (input.hasNext()) {
             System.out.println(input.nextLine());
             System.out.println(ESPACO);
         }
+    }
+
+    public static void imprimirResumoDoCaso() throws UnsupportedAudioFileException, LineUnavailableException, IOException {
+        if (CONTROLADOR == 1) {
+            String tituloLeitura13 = "Conclusão Caso 1º";
+            String textoLeitura13 = """
+                    Marcela Fernandes era aluna de Miguel, foi assim que se conheceram. Marcela estava com dificuldades em suas 
+                    aulas (química) e acabou se aproveitando de seu professor solteiro para conseguir uma nota extra. Marcela o 
+                    convidou para sua casa e os dois se encontraram, ela comprou um belo vinho tinto para eles tomarem. Mas 
+                    durante o "encontro" dos dois, Miguel percebe que a intenção de Marcela era mínima e que ele estava perdendo
+                     seu tempo. Com isso Miguel, que já tinha problemas de controle de raiva e ainda agora afetado pelo álcool, 
+                     se descontrolou e aproveitou a primeira chance em que a jovem moça foi ao toalhete e envenenou a sua bebida.
+                        """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura13.wav", textoLeitura13, tituloLeitura13);
+        } else if (CONTROLADOR == 2) {
+            String tituloLeitura14 = "Conclusão Caso 2º";
+            String textoLeitura14 = """
+                    Elisa e Fernando se conheceram no local de trabalho de Elisa (Floricultura). Fernando acabou se "interessando"
+                    pela jovem e começou a ir frequentemente na sua loja, sempre comprando uma flor. Começaram a criar uma amizade,
+                    porém sempre deixaram claro que não teriam nenhum tipo de relacionamento. Um dia Elisa ficou até tarde da noite
+                    na loja e no momento que saía se depara com Fernando, na porta da loja. Ele pergunta se ela aceita uma carona 
+                    e ela diz que sim. Nesse momento que o plano de Fernando entra em ação, ao entrarem no carro, Fernando apaga 
+                    Elisa e leva ela até o antigo Teatro da cidade, onde os seus desejos serão saciados.
+                        """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura14.wav", textoLeitura14, tituloLeitura14);
+        } else if (CONTROLADOR == 3) {
+            String tituloLeitura15 = "Conclusão Caso 3º";
+            String textoLeitura15 = """
+                    Natasha e Carlos conheceram-se em uma boate. Os dois haviam saído para curtir a noite e enquanto estavam se 
+                    divertindo, Natasha se depara com Carlos a observando enquanto ela dança. Um tempo depois ela vai ao bar pegar 
+                    um drink e ele vem atrás para conversar com ela. Os dois batem um papo e Carlos a chama para ir "para um lugar
+                    mais privado" e Natasha nesse momento quase não consegue esconder o esboço de raiva no seu rosto. Ela já havia 
+                    percebido a aliança no seu dedo. Nesse momento ela pensou em tudo, levar ele até um beco. Aproveitando a 
+                    oportunidade, enquanto Carlos ia ao banheiro uma última vez, ela jogou um boa noite cinderela no seu copo, o 
+                    qual o homem bebeu ao retornar até ela. O dois foram até o carro e dirigiram para um local próximo, porém deserto,
+                    e ao chegar lá Carlos já estava apagado. Visto que ele desmaiou, Natasha prosseguiu em jogá-lo no chão e executar
+                    ali mesmo a "operação".                
+                    """;
+            Who_killed.ReprodutorAudio.leitura("Audios/Leitura15.wav", textoLeitura15, tituloLeitura15);
+        }
+
     }
 }
