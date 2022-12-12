@@ -249,7 +249,6 @@ public class Investigacao {
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura09.wav", textoLeitura09, tituloLeitura09);
             imprimirResumoDoCaso();
             System.out.println(GREEN + "Consegui ACERTAR o meu " + CONTROLADOR + "º caso" + RESET);
-            System.out.println(BLUE + RESUMO1 + RESET);
             System.out.println("Pontuação --- " + PONTOS);
             CONTROLADOR++;
 
@@ -272,7 +271,6 @@ public class Investigacao {
             Who_killed.ReprodutorAudio.leitura("Audios/Leitura11.wav", textoLeitura11, tituloLeitura11);
             imprimirResumoDoCaso();
             System.out.println(GREEN + "Eu ERREI o meu " + CONTROLADOR + "º caso" + RESET);
-            System.out.println(BLUE + RESUMO1 + RESET);
             PONTOCADACASO[CONTROLADOR] = 0;
             imprimirResumoFinal();
         }

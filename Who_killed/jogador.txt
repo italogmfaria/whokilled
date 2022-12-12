@@ -1,2 +1,0 @@
--Nome = Teste 	-Nick = TT 	 -Pontuação = 0/3
--Nome = Jose 	-Nick = Jars 	 -Pontuação = 2/3

@@ -1,7 +1,7 @@
 Fernando Perez
-Nome Inocente 1
-Nome Inocente 2
-Nome Inocente 3
+Pablo Ochoa
+Luis López
+Natasha Fox
 Resumo Final Do Caso
 27 anos, mulher. Um corte foi feito na sua boca, como um "sorriso de sarcasmo". O corpo não foi violado.
 Casada, 1,68 de altura e 68Kg. Cabelo preto e pelo que parece sempre utiliza ele preso. Estava bem vestida.
@@ -24,5 +24,5 @@ Pele:[34mBranca[0m
 Profissão:[34m Dona de uma Floricultura[0m
 Roupas que estava vestida:[34m Vestido rosa[0m
 Data do Assassinato: [34m17/11/2022[0m
-Local do Assassinato: [34mEncontrada em um antigo teatro de sua cidade[0m
+Local do Assassinato: [34mEncontrada num antigo teatro da sua cidade[0m
 Hora que foi encontrado o corpo: [34mPor volta das 22:40h[0m
