@@ -4,3 +4,12 @@
 -Nome = meg 	-Nick = meg 	 -Pontuação = 2/3
 -Nome = Sabrina 	-Nick = Saas 	 -Pontuação = 3/3
 -Nome = clonadorDeCartao 	-Nick = kaioPjl 	 -Pontuação = 2/3
+-Nome = Rafael 	-Nick = Polar 	 -Pontuação = 0/3
+-Nome = Clarice 	-Nick = Clari 	 -Pontuação = 3/3
+-Nome = isaias 	-Nick = isack 	 -Pontuação = 0/3
+-Nome = jheny 	-Nick = pagani 	 -Pontuação = 0/3
+-Nome = joao vitor 	-Nick = joao1 	 -Pontuação = 0/3
+-Nome = joao vitor 	-Nick = joao1 	 -Pontuação = 0/3
+-Nome = Pedro 	-Nick = GarotoCowboy 	 -Pontuação = 0/3
+-Nome = Helen 	-Nick = helen 	 -Pontuação = 3/3
+
