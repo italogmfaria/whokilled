@@ -8,7 +8,7 @@ git remote add origin https://github.com/italogmfaria/whokilled.git
 git push -u origin main
  */
 
-package Who_killed.frontend;
+package Who_killed.Frontend;
 
 import Who_killed.Investigacao;
 
@@ -17,9 +17,6 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.*;
-import java.awt.LayoutManager;
-import java.awt.event.ComponentAdapter;
 import java.io.IOException;
 
 public class Lobby {

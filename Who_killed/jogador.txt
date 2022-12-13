@@ -1,0 +1,6 @@
+-Nome = Akyra 	-Nick = Akyra 	 -Pontuação = 3/3
+-Nome = Heloísa 	-Nick = pooppii 	 -Pontuação = 0/3
+-Nome = Helo e Ari 	-Nick = pooppi e Ary 	 -Pontuação = 2/3
+-Nome = meg 	-Nick = meg 	 -Pontuação = 2/3
+-Nome = Sabrina 	-Nick = Saas 	 -Pontuação = 3/3
+-Nome = clonadorDeCartao 	-Nick = kaioPjl 	 -Pontuação = 2/3
